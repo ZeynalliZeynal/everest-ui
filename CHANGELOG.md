@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.11...v0.1.12) (2025-01-16)
+
+
+### Bug Fixes
+
+* **ui:** fix spinner export ([dcda1f4](https://github.com/ZeynalliZeynal/everest-ui/commit/dcda1f474ce052d5046b18b89e2e6d9fba5a55fb))
+
 ### [0.1.11](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.10...v0.1.11) (2025-01-16)
 
 
