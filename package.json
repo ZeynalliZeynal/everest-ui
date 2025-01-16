@@ -10,7 +10,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "clean": "rimraf dist",
+    "build": "pnpm clean && rollup -c",
     "type-check": "tsc --noEmit",
     "push": "git push origin main --follow-tags && pnpm publish",
     "release": "standard-version"
