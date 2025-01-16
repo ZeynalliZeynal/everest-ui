@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.0...v0.1.1) (2025-01-16)
+
+
+### Features
+
+* **types:** export types of the tabs component ([2486aa5](https://github.com/ZeynalliZeynal/everest-ui/commit/2486aa5ea4d8260c2100c03abfc2f67febab0e16))
+* **ui:** add use client at the top ([1fae58c](https://github.com/ZeynalliZeynal/everest-ui/commit/1fae58c034ec81219edcb79757373946b818b21d))
+
 ## [0.1.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.0.1...v0.1.0) (2025-01-16)
 
 
