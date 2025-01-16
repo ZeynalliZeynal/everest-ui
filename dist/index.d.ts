@@ -1,3 +1,4 @@
+import * as react_jsx_runtime from 'react/jsx-runtime';
 import React$1, { ComponentProps } from 'react';
 
 interface TabProps extends React.ComponentProps<"button"> {
@@ -14,8 +15,8 @@ interface TabsProviderProps extends React.ComponentProps<"div"> {
 }
 //# sourceMappingURL=tabs.types.d.ts.map
 
-declare function Tabs({ children, className, ...etc }: TabsProviderProps): React$1.JSX.Element;
-declare function Tab(props: TabProps): React$1.JSX.Element;
+declare function Tabs({ children, className, ...etc }: TabsProviderProps): react_jsx_runtime.JSX.Element;
+declare function Tab(props: TabProps): react_jsx_runtime.JSX.Element;
 
 type CollapseState = "open" | "closed";
 interface CollapseContextProps {
@@ -39,12 +40,12 @@ interface CollapseContentProps extends ComponentProps<"div"> {
     className?: string;
 }
 
-declare function Collapse(props: CollapseProps): React$1.JSX.Element;
-declare function CollapseTrigger(props: CollapseTriggerProps): React$1.JSX.Element;
-declare function CollapseContent(props: CollapseContentProps): React$1.JSX.Element;
+declare function Collapse(props: CollapseProps): react_jsx_runtime.JSX.Element;
+declare function CollapseTrigger(props: CollapseTriggerProps): react_jsx_runtime.JSX.Element;
+declare function CollapseContent(props: CollapseContentProps): react_jsx_runtime.JSX.Element;
 
 declare function Spinner({ size }: {
     size?: number;
-}): React$1.JSX.Element;
+}): react_jsx_runtime.JSX.Element;
 
 export { Collapse, CollapseContent, type CollapseContentProps, type CollapseContextProps, type CollapseProps, CollapseTrigger, type CollapseTriggerProps, Spinner, Tab, type TabProps, Tabs, type TabsContextProps, type TabsProviderProps };
