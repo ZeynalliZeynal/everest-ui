@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.11](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.10...v0.1.11) (2025-01-16)
+
+
+### Features
+
+* **ui:** add spinner component ([b046ac1](https://github.com/ZeynalliZeynal/everest-ui/commit/b046ac15b011e5c2755dd084b38b1aedb7342423))
+
 ### [0.1.10](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.9...v0.1.10) (2025-01-16)
 
 ### [0.1.9](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.8...v0.1.9) (2025-01-16)
