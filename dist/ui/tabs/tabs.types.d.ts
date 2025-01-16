@@ -10,4 +10,5 @@ interface TabsContextProps {
 interface TabsProviderProps extends React.ComponentProps<"div"> {
     children: React.ReactNode;
 }
+export { TabProps, TabsContextProps, TabsProviderProps };
 //# sourceMappingURL=tabs.types.d.ts.map

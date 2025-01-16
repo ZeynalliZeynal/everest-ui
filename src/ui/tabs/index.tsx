@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useId } from "react";
+import { TabsContextProps, TabsProviderProps, TabProps } from "./tabs.types";
 
 const TabsContext = React.createContext<TabsContextProps | null>(null);
 function useTabsContext() {

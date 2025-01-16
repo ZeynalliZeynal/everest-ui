@@ -12,11 +12,13 @@
   "scripts": {
     "build": "rollup -c",
     "type-check": "tsc --noEmit",
+    "push": "git push origin main --follow-tags",
     "release": "standard-version"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react-dom": ">=16.8.0",
+    "framer-motion": "^11.18.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.0",
