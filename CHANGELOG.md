@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.13](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.12...v0.1.13) (2025-01-16)
+
+
+### Bug Fixes
+
+* remove use client statements ([e4c1b07](https://github.com/ZeynalliZeynal/everest-ui/commit/e4c1b07a82a0e7320dc07ed0bb48c4845a5fee73))
+
 ### [0.1.12](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.11...v0.1.12) (2025-01-16)
 
 
