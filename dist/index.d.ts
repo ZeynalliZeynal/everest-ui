@@ -43,4 +43,8 @@ declare function Collapse(props: CollapseProps): React$1.JSX.Element;
 declare function CollapseTrigger(props: CollapseTriggerProps): React$1.JSX.Element;
 declare function CollapseContent(props: CollapseContentProps): React$1.JSX.Element;
 
-export { Collapse, CollapseContent, type CollapseContentProps, type CollapseContextProps, type CollapseProps, CollapseTrigger, type CollapseTriggerProps, Tab, type TabProps, Tabs, type TabsContextProps, type TabsProviderProps };
+declare function Spinner({ size }: {
+    size?: number;
+}): React$1.JSX.Element;
+
+export { Collapse, CollapseContent, type CollapseContentProps, type CollapseContextProps, type CollapseProps, CollapseTrigger, type CollapseTriggerProps, Spinner, Tab, type TabProps, Tabs, type TabsContextProps, type TabsProviderProps };

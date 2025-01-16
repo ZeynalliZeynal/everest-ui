@@ -2,7 +2,7 @@ import React from "react";
 
 import { clsx } from "clsx";
 
-const Spinner = ({ size = 20 }: { size?: number }) => {
+export function Spinner({ size = 20 }: { size?: number }) {
   return (
     <div
       aria-hidden={true}
@@ -100,6 +100,4 @@ const Spinner = ({ size = 20 }: { size?: number }) => {
       </div>
     </div>
   );
-};
-
-export default Spinner;
+}
