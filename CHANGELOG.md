@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.7...v0.1.8) (2025-01-16)
+
+
+### Bug Fixes
+
+* remove button component ([bad2e9e](https://github.com/ZeynalliZeynal/everest-ui/commit/bad2e9e03f9a9e05beb27c02aa92e437178293c9))
+
 ### [0.1.7](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.6...v0.1.7) (2025-01-16)
 
 ### [0.1.6](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.5...v0.1.6) (2025-01-16)
