@@ -5,6 +5,19 @@ import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
 
+const preserveUseClient = () => ({
+  name: "preserve-use-client",
+  renderChunk(code) {
+    if (code.includes('"use client"') || code.includes("'use client'")) {
+      return {
+        code: `"use client";\n` + code,
+        map: null,
+      };
+    }
+    return null;
+  },
+});
+
 export default [
   {
     input: "src/index.ts",
@@ -34,6 +47,7 @@ export default [
         extract: "styles.css",
       }),
       terser(),
+      preserveUseClient(), // Ensure "use client" is retained
     ],
   },
   {
