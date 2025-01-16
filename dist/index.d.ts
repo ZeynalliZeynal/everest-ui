@@ -1,7 +1,5 @@
 import React$1, { ComponentProps } from 'react';
 
-declare const Button: ({ children, className, ...etc }: ButtonProps) => React$1.JSX.Element;
-
 interface TabProps extends React.ComponentProps<"button"> {
     children?: React.ReactNode;
     isPillActive?: boolean;
@@ -45,4 +43,4 @@ declare function Collapse(props: CollapseProps): React$1.JSX.Element;
 declare function CollapseTrigger(props: CollapseTriggerProps): React$1.JSX.Element;
 declare function CollapseContent(props: CollapseContentProps): React$1.JSX.Element;
 
-export { Button, Collapse, CollapseContent, type CollapseContentProps, type CollapseContextProps, type CollapseProps, CollapseTrigger, type CollapseTriggerProps, Tab, type TabProps, Tabs, type TabsContextProps, type TabsProviderProps };
+export { Collapse, CollapseContent, type CollapseContentProps, type CollapseContextProps, type CollapseProps, CollapseTrigger, type CollapseTriggerProps, Tab, type TabProps, Tabs, type TabsContextProps, type TabsProviderProps };
