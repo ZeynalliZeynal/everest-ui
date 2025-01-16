@@ -12,7 +12,7 @@
   "scripts": {
     "build": "rollup -c",
     "type-check": "tsc --noEmit",
-    "push": "git push origin main --follow-tags",
+    "push": "git push origin main --follow-tags && pnpm publish",
     "release": "standard-version"
   },
   "peerDependencies": {
