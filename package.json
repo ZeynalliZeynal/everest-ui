@@ -19,7 +19,8 @@
   "peerDependencies": {
     "framer-motion": ">=10.0.0",
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react-dom": ">=18.0.0",
+    "next": ">=14.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.0",
@@ -29,6 +30,7 @@
     "@types/react": "^19.0.7",
     "@types/styled-components": "^5.1.34",
     "autoprefixer": "^10.4.20",
+    "next": "^15.1.5",
     "postcss": "^8.5.1",
     "rimraf": "^6.0.1",
     "rollup": "^4.9.1",
