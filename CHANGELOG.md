@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.16](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.15...v0.1.16) (2025-01-17)
+
+
+### Features
+
+* **ui:** add use client statement to the spinner ([271351f](https://github.com/ZeynalliZeynal/everest-ui/commit/271351fa9afcb5cd789355cfd46023fdf1df3eb0))
+
 ### [0.1.15](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.14...v0.1.15) (2025-01-16)
 
 ### [0.1.14](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.13...v0.1.14) (2025-01-16)
