@@ -19,7 +19,7 @@
     "clean": "rimraf dist",
     "build": "pnpm clean && rollup -c",
     "type-check": "tsc --noEmit",
-    "push": "git push origin main --follow-tags",
+    "push": "git push origin main",
     "release": "standard-version"
   },
   "devDependencies": {
