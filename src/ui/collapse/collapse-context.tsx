@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { CollapseContextProps } from "./collapse.types";
 

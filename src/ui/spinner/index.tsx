@@ -1,5 +1,3 @@
-"use client";
-
 import { clsx } from "clsx";
 
 export function Spinner({ size = 20 }: { size?: number }) {
