@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.0.5...v0.0.6) (2025-01-22)
+
+
+### Bug Fixes
+
+* remove publish command at root package.json ([0ffe62f](https://github.com/ZeynalliZeynal/everest-ui/commit/0ffe62f1ed3f2bd592a43a21b29401fcd598d253))
+
 ### [0.0.5](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.0.4...v0.0.5) (2025-01-22)
 
 
