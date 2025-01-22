@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.17](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.16...v0.1.17) (2025-01-22)
+
+
+### Bug Fixes
+
+* update rollup.config.js to include the "use client" directive at the top of the files ([2b81fd8](https://github.com/ZeynalliZeynal/everest-ui/commit/2b81fd8081de6da1444aa5c3a43485af8f778963))
+
 ### [0.1.16](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.1.15...v0.1.16) (2025-01-17)
 
 
