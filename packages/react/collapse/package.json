@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/react-collapse",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "ISC",
   "exports": {
     ".": {
@@ -23,7 +23,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "echo 'Build handled by root'"
+    "build": "echo 'Build handled by root'",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@types/react": "^19.0.7",
