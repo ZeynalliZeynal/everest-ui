@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.0.4...v0.0.5) (2025-01-22)
+
+
+### Bug Fixes
+
+* clean working tree ([13cec29](https://github.com/ZeynalliZeynal/everest-ui/commit/13cec29028979e78553637d30eb7c2b7f4b815bb))
+
 ### [0.0.4](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.0.3...v0.0.4) (2025-01-22)
 
 
