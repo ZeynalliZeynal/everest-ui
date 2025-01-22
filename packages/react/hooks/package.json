@@ -1,6 +1,6 @@
 {
-  "name": "@everest-ui/react-collapse",
-  "version": "0.0.7",
+  "name": "@everest-ui/react-hooks",
+  "version": "0.0.1",
   "license": "ISC",
   "exports": {
     ".": {
@@ -22,13 +22,15 @@
     "release": "standard-version",
     "publish": "pnpm publish --access public"
   },
+  "dependencies": {
+    "@everest-ui/react-hooks": "workspace:*"
+  },
   "devDependencies": {
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "typescript": "^5.7.3",
-    "framer-motion": "^11.18.0"
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
     "react": ">=18.0.0 || ^19.0.0",
