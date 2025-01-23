@@ -20,6 +20,7 @@
   "scripts": {
     "build": "echo 'Build handled by root'",
     "release": "standard-version",
+    "clean": "rm -rf dist",
     "publish": "pnpm publish --access public"
   },
   "devDependencies": {

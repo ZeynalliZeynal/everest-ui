@@ -1,59 +1,48 @@
 import path from "node:path";
-import fs from "node:fs";
-import { fileURLToPath } from "url";
 import { globSync } from "glob";
 import * as esbuild from "esbuild";
 import * as tsup from "tsup";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { execa } from "execa";
+import fs from "fs";
 
 async function build(relativePath) {
   const tasks = [];
-  const pkg = relativePath.split(path.sep).slice(-1)[0];
-  const srcDir = path.join(relativePath, "src");
+  const pkg = relativePath.split(path.sep).slice(2)[0];
+  const files = ["index.ts"];
+  if (pkg === "everest-ui") {
+    files.push("internal.ts");
+  }
 
-  // Check if src directory exists
-  if (!fs.existsSync(srcDir)) {
-    console.warn(`Skipping ${relativePath}: 'src' directory not found.`);
+  // Use POSIX paths for consistency across tools
+  const entryPoints = files
+    .map((file) => path.join(relativePath, "src", file).replace(/\\/g, "/"))
+    .filter((filePath) => fs.existsSync(filePath));
+
+  if (entryPoints.length === 0) {
+    console.log(`No entry points found for ${relativePath}`);
     return;
   }
 
-  const entryPoint = path.join(srcDir, "index.ts");
-
-  // Check if entry point file exists
-  if (!fs.existsSync(entryPoint)) {
-    console.warn(`Skipping ${relativePath}: 'src/index.ts' not found.`);
-    return;
-  }
-
-  const dist = path.join(relativePath, "dist");
+  const dist = path.join(relativePath, "dist").replace(/\\/g, "/");
 
   const esbuildConfig = {
-    entryPoints: [entryPoint],
-    external: ["react", "react-dom", "framer-motion"],
+    entryPoints,
+    external: ["@everest-ui/*"],
     packages: "external",
     bundle: true,
     sourcemap: true,
-    target: "es2018",
+    format: "cjs",
+    target: "es2022",
     outdir: dist,
   };
 
-  // Build CJS
+  console.log(`Building ${relativePath}...`);
+
   tasks.push(
     esbuild
-      .build({
-        ...esbuildConfig,
-        format: "cjs",
-        outExtension: { ".js": ".cjs" },
-      })
+      .build(esbuildConfig)
       .then(() => console.log(`CJS: Built ${relativePath}`))
-      .catch((error) =>
-        console.error(`CJS: Error building ${relativePath}:`, error),
-      ),
   );
-
-  // Build ESM
   tasks.push(
     esbuild
       .build({
@@ -62,35 +51,24 @@ async function build(relativePath) {
         outExtension: { ".js": ".mjs" },
       })
       .then(() => console.log(`ESM: Built ${relativePath}`))
-      .catch((error) =>
-        console.error(`ESM: Error building ${relativePath}:`, error),
-      ),
   );
 
-  // Generate TypeScript declaration files
   tasks.push(
     tsup
       .build({
-        entry: [entryPoint],
+        entry: entryPoints,
         format: ["cjs", "esm"],
         dts: { only: true },
         outDir: dist,
-        silent: true,
-        external: ["react", "react-dom", "framer-motion"],
+        silent: false,
+        external: [/@everest-ui\/.+/],
       })
       .then(() => console.log(`TSC: Built ${relativePath}`))
-      .catch((error) =>
-        console.error(`TSC: Error building ${relativePath}:`, error),
-      ),
   );
 
   await Promise.all(tasks);
 }
 
-// Build React components
-globSync("packages/react/*").forEach(build);
+globSync("packages/*/*").forEach((path) => build(path.replace(/\\/g, "/")));
 
-// Build Core utilities
-globSync("packages/core/*").forEach(build);
-
-console.log("Build complete!");
+function done() {}

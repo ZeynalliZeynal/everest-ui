@@ -16,7 +16,6 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rimraf dist",
     "build": "node build.mjs",
     "type-check": "tsc --noEmit",
     "push": "git push origin main"
@@ -46,6 +45,7 @@
     "react-icons": "^5.4.0",
     "tsup": "^8.3.5",
     "esbuild": "^0.24.2",
+    "execa": "^9.5.2",
     "glob": "^11.0.1"
   },
   "peerDependenciesMeta": {
