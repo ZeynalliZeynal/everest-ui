@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
 import React, { HTMLAttributes, useCallback } from "react";
 import { usePopper } from "./popper-context";
 import { PopperTriggerProps } from "../popper.types";
 import { useResize } from "@everest-ui/react-hooks";
 import { chain } from "@everest-ui/chain";
 import { cn } from "@everest-ui/utils";
+import { Button } from "@everest-ui/react-button";
 
 export function PopperTrigger(props: PopperTriggerProps) {
   const {
@@ -50,7 +50,10 @@ export function PopperTrigger(props: PopperTriggerProps) {
   return asChild && React.isValidElement(children) ? (
     React.cloneElement(children, {
       ...attrs,
-      className: cn(className, children.props.className),
+      className: cn(
+        className,
+        (children.props as React.ComponentProps<"button">).className,
+      ),
     } as HTMLAttributes<HTMLElement>)
   ) : (
     <Button size="md" suffix={suffix} prefix={prefix} {...attrs}>

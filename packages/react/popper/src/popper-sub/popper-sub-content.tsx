@@ -1,18 +1,14 @@
-"use client";
-
-import { usePopper } from "@/components/ui/primitives/popper/popper-context";
-import { PopperSubContentProps } from "@/components/ui/primitives/popper/popper.types";
-import { useOutsideClick } from "@/hooks/use-ui";
-import { useResize } from "@/hooks/useResize";
-import { chain } from "@/utils/chain";
-import { cn } from "@/utils/lib";
-import { keyboardArrowNavigation } from "@/utils/ui/keyboard-navigation";
-import { mergeRefs } from "@/utils/ui/merge-refs";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { HTMLAttributes, useCallback } from "react";
 import { createPortal } from "react-dom";
-import { POPPER_ITEM_SELECTOR } from "../selectors";
 import { usePopperSub } from "./popper-sub-context";
+import { PopperSubContentProps } from "../popper.types";
+import { usePopper } from "../popper/popper-context";
+import { useOutsideClick, useResize } from "@everest-ui/react-hooks";
+import { keyboardArrowNavigation, mergeRefs } from "@everest-ui/react-utils";
+import { POPPER_ITEM_SELECTOR } from "@everest-ui/selectors";
+import { chain } from "@everest-ui/chain";
+import { cn } from "@everest-ui/utils";
 
 export const PopperSubContent = React.forwardRef<
   HTMLDivElement,
@@ -130,7 +126,10 @@ export const PopperSubContent = React.forwardRef<
           {asChild && React.isValidElement(children) ? (
             React.cloneElement(children, {
               ...attrs,
-              className: cn(className, children.props.className),
+              className: cn(
+                className,
+                (children.props as React.ComponentProps<"div">).className,
+              ),
             } as HTMLAttributes<HTMLElement>)
           ) : (
             <div
