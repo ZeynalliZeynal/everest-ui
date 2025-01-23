@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { usePopper } from '@/components/ui/primitives/popper/popper-context';
-import { PopperSubContentProps } from '@/components/ui/primitives/popper/popper.types';
-import { useOutsideClick } from '@/hooks/use-ui';
-import { useResize } from '@/hooks/useResize';
-import { chain } from '@/utils/chain';
-import { cn } from '@/utils/lib';
-import { keyboardArrowNavigation } from '@/utils/ui/keyboard-navigation';
-import { mergeRefs } from '@/utils/ui/merge-refs';
-import { AnimatePresence, motion } from 'framer-motion';
-import React, { HTMLAttributes, useCallback } from 'react';
-import { createPortal } from 'react-dom';
-import { POPPER_ITEM_SELECTOR } from '../selectors';
-import { usePopperSub } from './popper-sub-context';
+import { usePopper } from "@/components/ui/primitives/popper/popper-context";
+import { PopperSubContentProps } from "@/components/ui/primitives/popper/popper.types";
+import { useOutsideClick } from "@/hooks/use-ui";
+import { useResize } from "@/hooks/useResize";
+import { chain } from "@/utils/chain";
+import { cn } from "@/utils/lib";
+import { keyboardArrowNavigation } from "@/utils/ui/keyboard-navigation";
+import { mergeRefs } from "@/utils/ui/merge-refs";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { HTMLAttributes, useCallback } from "react";
+import { createPortal } from "react-dom";
+import { POPPER_ITEM_SELECTOR } from "../selectors";
+import { usePopperSub } from "./popper-sub-context";
 
 export const PopperSubContent = React.forwardRef<
   HTMLDivElement,
@@ -35,7 +35,7 @@ export const PopperSubContent = React.forwardRef<
 
   function handleKeyDown(event: React.KeyboardEvent) {
     if (!ref.current) return;
-    if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+    if (event.key === "ArrowUp" || event.key === "ArrowDown") {
       const obj = keyboardArrowNavigation({
         event,
         highlightedIndex,
@@ -78,23 +78,23 @@ export const PopperSubContent = React.forwardRef<
   React.useEffect(() => {
     if (!ref.current) return;
     function handleCloseOnKeyDown(event: KeyboardEvent) {
-      if (event.key === 'ArrowLeft') {
+      if (event.key === "ArrowLeft") {
         event.preventDefault();
         highlight(activeTrigger);
         closePopper();
       }
     }
-    document.addEventListener('keydown', handleCloseOnKeyDown);
+    document.addEventListener("keydown", handleCloseOnKeyDown);
 
-    return () => document.removeEventListener('keydown', handleCloseOnKeyDown);
+    return () => document.removeEventListener("keydown", handleCloseOnKeyDown);
   }, [activeTrigger, closePopper, highlight, ref]);
 
   const attrs = {
     tabIndex: -1,
-    'data-state': isOpen ? 'open' : 'closed',
-    'data-popper-sub-content': '',
-    'aria-orientation': 'vertical',
-    'aria-labelledby': id,
+    "data-state": isOpen ? "open" : "closed",
+    "data-popper-sub-content": "",
+    "aria-orientation": "vertical",
+    "aria-labelledby": id,
     ref: mergeRefs(ref, forwardRef),
     id,
     className,
@@ -121,8 +121,8 @@ export const PopperSubContent = React.forwardRef<
             scale: 0.8,
           }}
           style={{
-            position: 'fixed',
-            pointerEvents: 'auto',
+            position: "fixed",
+            pointerEvents: "auto",
             left: triggerPosition.left,
             ...style,
           }}
@@ -136,7 +136,7 @@ export const PopperSubContent = React.forwardRef<
             <div
               {...attrs}
               className={cn(
-                'bg-background-100 p-2 rounded-xl border w-48 focus:outline-0',
+                "bg-background-100 p-2 rounded-xl border w-48 focus:outline-0",
                 attrs.className,
               )}
             >
@@ -146,8 +146,8 @@ export const PopperSubContent = React.forwardRef<
         </motion.div>
       )}
     </AnimatePresence>,
-    document.body.querySelector('[data-popper-wrapper]')?.parentElement ||
+    document.body.querySelector("[data-popper-wrapper]")?.parentElement ||
       document.body,
   );
 });
-PopperSubContent.displayName = 'PopperSubContent';
+PopperSubContent.displayName = "PopperSubContent";

@@ -1,24 +1,22 @@
-'use client';
-
-import React, { useState } from 'react';
-import { PopperContextProps } from './popper.types';
-import { useRestrict } from '@/hooks/use-ui';
+import React, { useState } from "react";
+import { PopperContextProps } from "../popper.types";
+import { useRestrict } from "@everest-ui/react-hooks";
 import {
   POPPER_CONTENT_SELECTOR,
   POPPER_ITEM_SELECTOR,
   POPPER_SUB_CONTENT_SELECTOR,
-} from '@/components/ui/primitives/selectors';
+} from "@everest-ui/selectors";
 
 const PopperContext = React.createContext<PopperContextProps | null>(null);
 
 export function usePopper() {
   const context = React.useContext(PopperContext);
   if (!context)
-    throw new Error('usePopper must be used within a Popper context');
+    throw new Error("usePopper must be used within a Popper context");
   return context;
 }
 
-export function PopperProvider({ children }: { children: React.ReactNode }) {
+export function Popper({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
   const [triggerPosition, setTriggerPosition] = useState<DOMRect | null>(null);
   const [highlightedIndex, setHighlightedIndex] = React.useState<
@@ -39,7 +37,7 @@ export function PopperProvider({ children }: { children: React.ReactNode }) {
         element.closest(POPPER_CONTENT_SELECTOR) ||
         (element.closest(POPPER_SUB_CONTENT_SELECTOR) as HTMLElement);
       const items = Array.from(
-        rootElement.querySelectorAll(POPPER_ITEM_SELECTOR)
+        rootElement.querySelectorAll(POPPER_ITEM_SELECTOR),
       );
       setHighlightedItem(element);
       element?.focus();

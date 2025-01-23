@@ -1,12 +1,10 @@
-'use client';
-
-import { PopperTriggerProps } from '@/components/ui/primitives/popper/popper.types';
-import { usePopper } from '@/components/ui/primitives/popper/popper-context';
-import { Button } from '@/components/ui/button';
-import { chain } from '@/utils/chain';
-import React, { HTMLAttributes, useCallback } from 'react';
-import { useResize } from '@/hooks/useResize';
-import { cn } from '@/utils/lib';
+import { Button } from "@/components/ui/button";
+import React, { HTMLAttributes, useCallback } from "react";
+import { usePopper } from "./popper-context";
+import { PopperTriggerProps } from "../popper.types";
+import { useResize } from "@everest-ui/react-hooks";
+import { chain } from "@everest-ui/chain";
+import { cn } from "@everest-ui/utils";
 
 export function PopperTrigger(props: PopperTriggerProps) {
   const {
@@ -38,11 +36,11 @@ export function PopperTrigger(props: PopperTriggerProps) {
 
   const attrs = {
     ref,
-    role: 'button',
-    'aria-controls': id,
-    'aria-expanded': isOpen,
-    'data-disabled': disabled,
-    'data-state': isOpen ? 'open' : 'closed',
+    role: "button",
+    "aria-controls": id,
+    "aria-expanded": isOpen,
+    "data-disabled": disabled,
+    "data-state": isOpen ? "open" : "closed",
     onMouseDown: chain(handleMouseDown, onMouseDown),
     onClick: chain(handleMouseDown, onClick),
     className,

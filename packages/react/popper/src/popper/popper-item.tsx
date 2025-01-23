@@ -1,12 +1,10 @@
-'use client';
-
-import { usePopper } from '@/components/ui/primitives/popper/popper-context';
-import { chain } from '@/utils/chain';
-import { cn } from '@/utils/lib';
-import React, { HTMLAttributes } from 'react';
-import { mergeRefs } from '@/utils/ui/merge-refs';
-import { PopperItemProps } from '@/components/ui/primitives/popper/popper.types';
-import { POPPER_ITEM_SELECTOR } from '@/components/ui/primitives/selectors';
+import { cn } from "@everest-ui/utils";
+import React, { HTMLAttributes } from "react";
+import { PopperItemProps } from "../popper.types";
+import { usePopper } from "./popper-context";
+import { POPPER_ITEM_SELECTOR } from "@everest-ui/selectors";
+import { mergeRefs } from "@everest-ui/react-utils";
+import { chain } from "@everest-ui/chain";
 
 export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
   (props, forwardRef) => {
@@ -41,14 +39,14 @@ export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
     }
 
     function handleKeyDown(event: React.KeyboardEvent) {
-      if (event.key === 'Enter' || event.key === ' ') {
+      if (event.key === "Enter" || event.key === " ") {
         ref.current?.click();
       }
     }
 
     function handleClick(event: React.MouseEvent<HTMLElement>) {
       const target = event.target as HTMLElement;
-      if (target.closest(POPPER_ITEM_SELECTOR)?.hasAttribute('aria-controls'))
+      if (target.closest(POPPER_ITEM_SELECTOR)?.hasAttribute("aria-controls"))
         return;
       closePopper();
     }
@@ -56,10 +54,10 @@ export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
     const attrs = {
       ref: mergeRefs(ref, forwardRef),
       tabIndex: -1,
-      'data-popper-item': '',
-      role: 'menuitem',
-      'data-disabled': disabled ? '' : null,
-      'data-highlighted': highlightedItem === ref.current ? '' : null,
+      "data-popper-item": "",
+      role: "menuitem",
+      "data-disabled": disabled ? "" : null,
+      "data-highlighted": highlightedItem === ref.current ? "" : null,
       className,
       onClick: !disabled ? chain(onClick, handleClick) : undefined,
       onMouseEnter: !disabled ? handleMouseEnter : undefined,
@@ -71,18 +69,21 @@ export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
     return asChild && React.isValidElement(children) ? (
       React.cloneElement(children, {
         ...attrs,
-        className: cn(className, children.props.className),
+        className: cn(
+          className,
+          (children.props as React.ComponentProps<"div">).className,
+        ),
       } as HTMLAttributes<HTMLElement>)
     ) : (
       <div
         {...attrs}
         className={cn(
-          'flex items-center justify-between px-2 rounded-md cursor-pointer h-10 align-middle transition focus:bg-gray-alpha-100 outline-none data-[disabled]:text-gray-500 data-[disabled]:pointer-events-none data-[disabled]:focus:bg-transparent',
+          "flex items-center justify-between px-2 rounded-md cursor-pointer h-10 align-middle transition focus:bg-gray-alpha-100 outline-none data-[disabled]:text-gray-500 data-[disabled]:pointer-events-none data-[disabled]:focus:bg-transparent",
           attrs.className,
         )}
       >
         <span
-          className={cn('flex items-center gap-2', inset && !prefix && 'pl-3')}
+          className={cn("flex items-center gap-2", inset && !prefix && "pl-3")}
         >
           {prefix}
           {children}
@@ -93,4 +94,4 @@ export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
   },
 );
 
-PopperItem.displayName = 'PopperItem';
+PopperItem.displayName = "PopperItem";

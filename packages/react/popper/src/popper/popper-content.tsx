@@ -1,6 +1,4 @@
-"use client";
-
-import { usePopper } from "./popper";
+import { usePopper } from "./popper-context";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick, useResize } from "@everest-ui/react-hooks";
@@ -12,9 +10,9 @@ import {
   POPPER_SUB_CONTENT_SELECTOR,
 } from "@everest-ui/selectors";
 import { chain } from "@everest-ui/chain";
-import { PopperContentProps } from "./popper.types";
+import { PopperContentProps } from "../popper.types";
 import { keyboardArrowNavigation, mergeRefs } from "@everest-ui/react-utils";
-import { alignPopper } from "./utils/align-popper";
+import { alignPopper } from "../utils/align-popper";
 
 export const PopperContent = React.forwardRef<
   HTMLDivElement,

@@ -1,11 +1,9 @@
-'use client';
-
+import React, { useState } from "react";
+import { PopperProviderProps } from "../popper.types";
 import {
   POPPER_ITEM_SELECTOR,
   POPPER_SUB_CONTENT_SELECTOR,
-} from '@/components/ui/primitives/selectors';
-import React, { useState } from 'react';
-import { PopperProviderProps } from './popper.types';
+} from "@everest-ui/selectors";
 
 export const PopperSubContext = React.createContext<PopperProviderProps | null>(
   null,
@@ -14,7 +12,7 @@ export const PopperSubContext = React.createContext<PopperProviderProps | null>(
 export function usePopperSub() {
   const context = React.useContext(PopperSubContext);
   if (!context)
-    throw new Error('usePopperSub must be used within a PopperSub context');
+    throw new Error("usePopperSub must be used within a PopperSub context");
   return context;
 }
 
