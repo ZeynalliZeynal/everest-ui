@@ -1,6 +1,6 @@
 {
-  "name": "@everest-ui/react-hooks",
-  "version": "0.0.1",
+  "name": "@everest-ui/chain",
+  "version": "1.0.0",
   "license": "ISC",
   "source": "./src/index.ts",
   "main": "dist/index.cjs",
@@ -15,23 +15,14 @@
   },
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "build": "echo 'Build handled by root'",
-    "release": "standard-version",
-    "publish": "pnpm publish --access public"
+    "release": "standard-version"
   },
   "devDependencies": {
-    "@types/react": "^19.0.7",
-    "@types/react-dom": "^19.0.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "typescript": "^5.7.3"
-  },
-  "peerDependencies": {
-    "react": ">=18.0.0 || ^19.0.0",
-    "react-dom": ">=18.0.0 || ^19.0.0",
-    "framer-motion": ">=11.0.0"
   }
 }

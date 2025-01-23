@@ -15,7 +15,7 @@ const createConfig = (componentName) => {
 
   if (!fs.existsSync(packagePath)) {
     console.warn(
-      `Skipping ${componentName} as it does not contain a package.json.`
+      `Skipping ${componentName} as it does not contain a package.json.`,
     );
     return [];
   }
@@ -47,6 +47,7 @@ const createConfig = (componentName) => {
           tsconfig: "./tsconfig.json",
           declaration: true,
           declarationDir: path.join(componentDir, "dist"),
+          rootDir: path.join(componentDir, "src"),
         }),
         postcss(),
         terser({
@@ -66,7 +67,7 @@ const createConfig = (componentName) => {
         },
       ],
       plugins: [dts()],
-      external: [/\\.css$/],
+      external: [/\.css$/],
     },
   ];
 };

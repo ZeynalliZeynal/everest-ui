@@ -1,20 +1,18 @@
-'use client';
-
-import React from 'react';
-import { cn } from '@/utils/lib';
+import React from "react";
+import { cn } from "@everest-ui/utils";
 
 export const PopperSeparator = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<'div'>
+  React.ComponentProps<"div">
 >((props, ref) => {
   return (
     <div
       ref={ref}
       role="separator"
       aria-orientation="horizontal"
-      className={cn('-mx-2 my-2 h-px bg-gray-alpha-400', props.className)}
+      className={cn("-mx-2 my-2 h-px bg-gray-alpha-400", props.className)}
       {...props}
     />
   );
 });
-PopperSeparator.displayName = 'PopperSeparator';
+PopperSeparator.displayName = "PopperSeparator";

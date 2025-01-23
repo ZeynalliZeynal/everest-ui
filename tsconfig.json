@@ -33,7 +33,14 @@
     "stripInternal": true,
     "target": "ES2022",
     "paths": {
-      "@everest-ui/react-hooks": ["./packages/react/hooks/src"]
+      "@everest-ui/react-hooks": ["./packages/react/hooks/src"],
+      "@everest-ui/react-popper": ["./packages/react/popper/src"],
+      "@everest-ui/react-button": ["./packages/react/button/src"],
+      "@everest-ui/react-utils": ["./packages/react/utils/src"],
+
+      "@everest-ui/chain": ["./packages/core/chain/src"],
+      "@everest-ui/selectors": ["./packages/core/selectors/src"],
+      "@everest-ui/utils": ["./packages/core/utils/src"],
     }
   }
 }
