@@ -97,6 +97,147 @@ importers:
         specifier: ^5.0.0
         version: 5.7.3
 
+  packages/core/chain:
+    devDependencies:
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+  packages/core/selectors:
+    devDependencies:
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+  packages/core/utils:
+    devDependencies:
+      tailwind-merge:
+        specifier: ^2.6.0
+        version: 2.6.0
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+  packages/react/button:
+    dependencies:
+      '@everest-ui/utils':
+        specifier: workspace:*
+        version: link:../../core/utils
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.7
+        version: 19.0.7
+      '@types/react-dom':
+        specifier: ^19.0.3
+        version: 19.0.3(@types/react@19.0.7)
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+  packages/react/collapse:
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.7
+        version: 19.0.7
+      '@types/react-dom':
+        specifier: ^19.0.3
+        version: 19.0.3(@types/react@19.0.7)
+      framer-motion:
+        specifier: ^11.18.0
+        version: 11.18.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+  packages/react/hooks:
+    dependencies:
+      framer-motion:
+        specifier: '>=11.0.0'
+        version: 11.18.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.7
+        version: 19.0.7
+      '@types/react-dom':
+        specifier: ^19.0.3
+        version: 19.0.3(@types/react@19.0.7)
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+  packages/react/popper:
+    dependencies:
+      '@everest-ui/chain':
+        specifier: workspace:*
+        version: link:../../core/chain
+      '@everest-ui/react-button':
+        specifier: workspace:*
+        version: link:../button
+      '@everest-ui/react-hooks':
+        specifier: workspace:*
+        version: link:../hooks
+      '@everest-ui/selectors':
+        specifier: workspace:*
+        version: link:../../core/selectors
+      '@everest-ui/utils':
+        specifier: workspace:*
+        version: link:../../core/utils
+      framer-motion:
+        specifier: '>=11.0.0'
+        version: 11.18.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.7
+        version: 19.0.7
+      '@types/react-dom':
+        specifier: ^19.0.3
+        version: 19.0.3(@types/react@19.0.7)
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+      react-focus-lock:
+        specifier: ^2.13.5
+        version: 2.13.5(@types/react@19.0.7)(react@19.0.0)
+      react-icons:
+        specifier: ^5.4.0
+        version: 5.4.0(react@19.0.0)
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+  packages/react/utils:
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.7
+        version: 19.0.7
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
 packages:
 
   '@alloc/quick-lru@5.2.0':
