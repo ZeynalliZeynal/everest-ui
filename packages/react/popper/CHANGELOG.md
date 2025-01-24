@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.4](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.2.3...v1.2.4) (2025-01-24)
+
+
+### Bug Fixes
+
+* export Popper from popper/index.tsx ([47725f3](https://github.com/ZeynalliZeynal/everest-ui/commit/47725f3de812e89572d56bcf030669c5df04b084))
+
 ### [1.2.3](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.0.3...v1.2.3) (2025-01-24)
 
 ### [1.2.2](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.0.5...v1.2.2) (2025-01-24)
