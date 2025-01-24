@@ -1,6 +1,7 @@
 "use client";
 
 export {
+  Popper,
   PopperLabel,
   PopperSeparator,
   PopperContent,

@@ -1,6 +1,7 @@
 /**
  * Base Popper components
  */
+export { Popper } from "./popper-context";
 export { PopperContent } from "./popper-content";
 export { PopperItem } from "./popper-item";
 export { PopperTrigger } from "./popper-trigger";
