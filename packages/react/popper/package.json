@@ -32,6 +32,7 @@
     "@everest-ui/react-hooks": "workspace:*",
     "@everest-ui/selectors": "workspace:*",
     "@everest-ui/utils": "workspace:*",
+    "@everest-ui/react-utils": "workspace:*",
     "@everest-ui/react-button": "workspace:*",
     "@everest-ui/chain": "workspace:*"
   },
