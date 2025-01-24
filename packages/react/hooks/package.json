@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/react-hooks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "ISC",
   "exports": {
     ".": {
