@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.0.4...v1.2.0) (2025-01-24)
+
+
+### Features
+
+* add build.mjs file ([4d55038](https://github.com/ZeynalliZeynal/everest-ui/commit/4d550383a272cb73940370454a1650b863a9f63a))
+
+
+### Bug Fixes
+
+* update button/package.json file ([8774c2b](https://github.com/ZeynalliZeynal/everest-ui/commit/8774c2b9d991ccccf4694338b11a2c40cca2fdda))
+
 ## [1.1.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v0.0.4...v1.1.0) (2025-01-24)
 
 
