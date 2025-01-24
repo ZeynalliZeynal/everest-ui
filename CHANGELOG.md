@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.1.0...v1.2.0) (2025-01-24)
+
+
+### Features
+
+* add button story ([f46b778](https://github.com/ZeynalliZeynal/everest-ui/commit/f46b77816a0fe0284e2915040a2cca9b04c53f84))
+
 ## [1.1.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.2.0...v1.1.0) (2025-01-24)
 
 
