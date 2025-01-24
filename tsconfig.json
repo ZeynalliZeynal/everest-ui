@@ -1,5 +1,5 @@
 {
-  "include": ["packages"],
+  "include": ["packages", ".storybook", "**/*.stories.tsx"],
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
@@ -40,7 +40,7 @@
 
       "@everest-ui/chain": ["./packages/core/chain/src"],
       "@everest-ui/selectors": ["./packages/core/selectors/src"],
-      "@everest-ui/utils": ["./packages/core/utils/src"],
+      "@everest-ui/utils": ["./packages/core/utils/src"]
     }
   }
 }
