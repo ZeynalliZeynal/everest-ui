@@ -12,4 +12,4 @@ $ pnpm add @everest-ui/react-popper
 
 ## Usage
 
-View docs [here](https://radix-ui.com/primitives/docs/components/collapsible).
+_Not available yet._
