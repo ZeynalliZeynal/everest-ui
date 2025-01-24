@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function keyboardArrowNavigation({
   event,
   highlightedIndex,
@@ -10,8 +8,8 @@ export function keyboardArrowNavigation({
   itemSelector: string;
 }) {
   if (!event.currentTarget) return;
-  const direction: 'next' | 'previous' =
-    event.key === 'ArrowUp' ? 'previous' : 'next';
+  const direction: "next" | "previous" =
+    event.key === "ArrowUp" ? "previous" : "next";
 
   const menuItems = Array.from(
     (event.currentTarget as HTMLElement).querySelectorAll(itemSelector),
@@ -19,7 +17,7 @@ export function keyboardArrowNavigation({
 
   let nextIndex;
   switch (direction) {
-    case 'next':
+    case "next":
       nextIndex =
         highlightedIndex === undefined
           ? 0
