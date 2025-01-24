@@ -15,3 +15,4 @@ storybook-static
 
 # So devs can maintain their own todo lists in the project
 TODO.md
+*storybook.log
