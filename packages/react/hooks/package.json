@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "build": "echo 'Build handled by root'",
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist",
     "release": "standard-version",
     "publish": "pnpm publish --access public"
   },
