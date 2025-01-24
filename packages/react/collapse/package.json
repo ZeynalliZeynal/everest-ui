@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/react-collapse",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "ISC",
   "source": "./src/index.ts",
   "main": "dist/index.cjs",
