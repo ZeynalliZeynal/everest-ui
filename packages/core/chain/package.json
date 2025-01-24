@@ -1,15 +1,14 @@
 {
   "name": "@everest-ui/chain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "ISC",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": {
-        "types": "./dist/index.d.mts",
         "default": "./dist/index.mjs"
       },
       "require": {
-        "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
       }
     }

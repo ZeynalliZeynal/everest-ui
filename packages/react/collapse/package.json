@@ -1,18 +1,22 @@
 {
   "name": "@everest-ui/react-collapse",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "ISC",
-  "source": "./src/index.ts",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": {
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "default": "./dist/index.js"
+      }
     }
   },
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "sideEffects": false,
   "files": [
     "dist"
