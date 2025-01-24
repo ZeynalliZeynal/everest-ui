@@ -30,5 +30,10 @@
   "devDependencies": {
     "typescript": "^5.7.3",
     "tailwind-merge": "^2.6.0"
+  },
+  "homepage": "https://todoist-liard-alpha.vercel.app/geist/introduction",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeynalliZeynal/everest-ui.git"
   }
 }
