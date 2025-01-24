@@ -1,6 +1,6 @@
 {
   "name": "primitives",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "description": "A simple React library for educational purpose",
   "type": "module",
