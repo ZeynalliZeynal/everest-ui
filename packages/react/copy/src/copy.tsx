@@ -1,23 +1,50 @@
+import { chain } from "@everest-ui/chain";
+import { useCopy } from "@everest-ui/react-hooks";
 import { cn } from "@everest-ui/utils";
 import React from "react";
 import { FaCheck } from "react-icons/fa6";
 import { FiCopy } from "react-icons/fi";
 
-type CopyProps<C extends React.ElementType = "div"> =
-  React.ComponentPropsWithoutRef<C> & {
-    text: string;
-    children:
-      | (({ isCopying }: { isCopying: boolean }) => React.ReactNode)
-      | React.ReactNode;
-  };
+export type CopyProps = React.HTMLAttributes<HTMLElement> & {
+  text: string;
+  children:
+    | (({ isCopying }: { isCopying: boolean }) => React.ReactNode)
+    | React.ReactNode;
+};
 
-export function Copy(props: CopyProps) {
-  const [isCopying, setIsCopying] = React.useState(false);
+const CopyContext = React.createContext<{ copying: boolean } | null>(null);
 
-  const { text, children, className } = props;
+function useCopyContext() {
+  const context = React.useContext(CopyContext);
+  if (!context) {
+    throw new Error("useCopyContext must be used within a Copy");
+  }
+  return context;
+}
+
+export function Copy({ children, text, ...rest }: CopyProps) {
+  const [copying, copy] = useCopy({ text });
+
+  <CopyContext.Provider value={{ copying }}>
+    {React.isValidElement(children) &&
+      React.cloneElement(children, {
+        onClick: chain(
+          (children.props as React.HTMLAttributes<HTMLElement>).onClick,
+          copy
+        ),
+        ...rest,
+      })}
+  </CopyContext.Provider>;
+}
+
+export function CopyIndicator({
+  className,
+  ...rest
+}: React.ComponentProps<"div">) {
+  const { copying } = useCopyContext();
 
   return (
-    <div className={cn("relative z-10", className)} {...props}>
+    <div className={cn("relative z-10", className)} {...rest}>
       <span
         aria-hidden={true}
         className='absolute top-1/2 size-full translate-y-[-50%] flex items-center justify-center'
