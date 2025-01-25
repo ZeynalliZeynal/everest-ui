@@ -25,15 +25,17 @@ function useCopyContext() {
 export function Copy({ children, text }: CopyProps) {
   const [copying, copy] = useCopy({ text });
 
-  <CopyContext.Provider value={{ copying }}>
-    {React.isValidElement(children) &&
-      React.cloneElement(children, {
-        onClick: chain(
-          (children.props as React.HTMLAttributes<HTMLElement>).onClick,
-          copy
-        ),
-      } as React.HTMLAttributes<HTMLElement>)}
-  </CopyContext.Provider>;
+  return (
+    <CopyContext.Provider value={{ copying }}>
+      {React.isValidElement(children) &&
+        React.cloneElement(children, {
+          onClick: chain(
+            (children.props as React.HTMLAttributes<HTMLElement>).onClick,
+            copy
+          ),
+        } as React.HTMLAttributes<HTMLElement>)}
+    </CopyContext.Provider>
+  );
 }
 
 export function CopyIndicator({
