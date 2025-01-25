@@ -31,6 +31,7 @@
   "dependencies": {
     "@everest-ui/react-utils": "workspace:*",
     "@everest-ui/utils": "workspace:*",
+    "@everest-ui/react-hooks": "workspace:*",
     "@everest-ui/chain": "workspace:*"
   },
   "devDependencies": {
