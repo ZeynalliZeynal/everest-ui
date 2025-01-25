@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.7.0...v1.8.0) (2025-01-25)
+
+
+### Features
+
+* add CopyIndicator and Copy components ([7e23212](https://github.com/ZeynalliZeynal/everest-ui/commit/7e23212eb878a3805774f5d7b6bcce51233deba1))
+* add useCopy react hook ([da46ae4](https://github.com/ZeynalliZeynal/everest-ui/commit/da46ae44e9a9e61bf661b578c228dac09a7c54a4))
+
 ## [1.7.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.6.0...v1.7.0) (2025-01-25)
 
 
