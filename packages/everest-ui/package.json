@@ -1,25 +1,13 @@
 {
   "name": "everest-ui",
   "version": "1.0.2",
+  "type": "module",
   "license": "ISC",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": {
-        "default": "./dist/index.mjs"
-      },
-      "require": {
-        "default": "./dist/index.js"
-      }
-    }
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
-    "everest": "./dist/bin/cli.js"
+    "everest-ui": "./bin/cli.js"
   },
-  "source": "./src/index.ts",
-  "main": "./dist/src/index.js",
-  "module": "./dist/src/index.mjs",
-  "types": "./dist/src/index.d.ts",
   "sideEffects": false,
   "files": [
     "dist",
@@ -29,7 +17,7 @@
     "build": "pnpm clean && tsup",
     "dev": "tsup --watch",
     "release": "standard-version",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "clean": "rimraf .turbo && rimraf node_modules && rimraf dist",
     "publish": "pnpm publish --access public"
   },
   "devDependencies": {
