@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.5.0...v1.1.2) (2025-01-25)
+
+
+### Bug Fixes
+
+* change target to esnext in tsup config ([9f5a23f](https://github.com/ZeynalliZeynal/everest-ui/commit/9f5a23fb742350e629f06799be9def9b6098b9b4))
+
 ### [1.0.6](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.5.0...v1.0.6) (2025-01-25)
 
 ### [1.0.5](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.5.0...v1.0.5) (2025-01-25)
