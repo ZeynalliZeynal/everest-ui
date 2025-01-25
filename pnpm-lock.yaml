@@ -189,6 +189,9 @@ importers:
       '@everest-ui/chain':
         specifier: workspace:*
         version: link:../../core/chain
+      '@everest-ui/react-hooks':
+        specifier: workspace:*
+        version: link:../hooks
       '@everest-ui/react-utils':
         specifier: workspace:*
         version: link:../utils
