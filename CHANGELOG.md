@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.9.0...v1.9.1) (2025-01-25)
+
+
+### Bug Fixes
+
+* update storybook, use webpack ([2354f8a](https://github.com/ZeynalliZeynal/everest-ui/commit/2354f8a83e319e5ae434dfb127f2bf5555535e47))
+
 ## [1.9.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.8.1...v1.9.0) (2025-01-25)
 
 
