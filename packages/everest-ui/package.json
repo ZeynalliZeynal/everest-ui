@@ -29,7 +29,8 @@
     "prompts": "^2.4.2",
     "tsup": "^8.3.5",
     "commander": "^13.1.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "execa": "^9.5.2"
   },
   "homepage": "https://todoist-liard-alpha.vercel.app/geist/introduction",
   "repository": {
