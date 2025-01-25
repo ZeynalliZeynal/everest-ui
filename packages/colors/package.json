@@ -6,7 +6,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "postcss src/tailwind.css -o dist/tailwind.css",
+    "build": "postcss src/styles.css -o dist/tailwind.css",
     "release": "standard-version",
     "clean": "rimraf dist"
   },
