@@ -14,19 +14,19 @@
     }
   },
   "bin": {
-    "everest": "./bin/cli.js"
+    "everest": "./dist/bin/cli.js"
   },
   "source": "./src/index.ts",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/src/index.js",
+  "module": "./dist/src/index.mjs",
+  "types": "./dist/src/index.d.ts",
   "sideEffects": false,
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "pnpm clean && tsup",
     "dev": "tsup --watch",
     "release": "standard-version",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
