@@ -5,12 +5,12 @@ import React from "react";
 import { FaCheck } from "react-icons/fa6";
 import { FiCopy } from "react-icons/fi";
 
-export type CopyProps = React.HTMLAttributes<HTMLElement> & {
+export interface CopyProps {
   text: string;
   children:
     | (({ isCopying }: { isCopying: boolean }) => React.ReactNode)
     | React.ReactNode;
-};
+}
 
 const CopyContext = React.createContext<{ copying: boolean } | null>(null);
 
@@ -22,7 +22,7 @@ function useCopyContext() {
   return context;
 }
 
-export function Copy({ children, text, ...rest }: CopyProps) {
+export function Copy({ children, text }: CopyProps) {
   const [copying, copy] = useCopy({ text });
 
   <CopyContext.Provider value={{ copying }}>
@@ -32,8 +32,7 @@ export function Copy({ children, text, ...rest }: CopyProps) {
           (children.props as React.HTMLAttributes<HTMLElement>).onClick,
           copy
         ),
-        ...rest,
-      })}
+      } as React.HTMLAttributes<HTMLElement>)}
   </CopyContext.Provider>;
 }
 
