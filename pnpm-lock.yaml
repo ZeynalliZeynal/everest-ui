@@ -37,13 +37,22 @@ importers:
         version: 8.5.1(@storybook/test@8.5.1(storybook@8.5.1))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.1)(typescript@5.7.3)
       '@storybook/react-vite':
         specifier: 8.5.1
-        version: 8.5.1(@storybook/test@8.5.1(storybook@8.5.1))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(rollup@4.30.1)(storybook@8.5.1)(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.7)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))
+        version: 8.5.1(@storybook/test@8.5.1(storybook@8.5.1))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(rollup@4.30.1)(storybook@8.5.1)(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.10)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))
       '@storybook/test':
         specifier: 8.5.1
         version: 8.5.1(storybook@8.5.1)
       '@tsconfig/recommended':
         specifier: ^1.0.8
         version: 1.0.8
+      '@types/fs-extra':
+        specifier: ^11.0.4
+        version: 11.0.4
+      '@types/node':
+        specifier: ^22.10.10
+        version: 22.10.10
+      '@types/prompts':
+        specifier: ^2.4.9
+        version: 2.4.9
       '@types/react':
         specifier: ^19.0.7
         version: 19.0.7
@@ -53,9 +62,15 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.5.1)
+      chalk:
+        specifier: ^5.4.1
+        version: 5.4.1
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      commander:
+        specifier: ^13.1.0
+        version: 13.1.0
       esbuild:
         specifier: ^0.24.2
         version: 0.24.2
@@ -65,12 +80,18 @@ importers:
       framer-motion:
         specifier: ^11.18.0
         version: 11.18.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      fs-extra:
+        specifier: ^11.3.0
+        version: 11.3.0
       glob:
         specifier: ^11.0.1
         version: 11.0.1
       postcss:
         specifier: ^8.5.1
         version: 8.5.1
+      prompts:
+        specifier: ^2.4.2
+        version: 2.4.2
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -916,8 +937,14 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/fs-extra@11.0.4':
+    resolution: {integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==}
+
   '@types/hoist-non-react-statics@3.3.6':
     resolution: {integrity: sha512-lPByRJUer/iN/xa4qpyL0qmL11DqNW81iU/IG1S3uvRUq4oKagz8VCxZjiWkumgt66YT3vOdDgZ0o32sGKtCEw==}
+
+  '@types/jsonfile@6.1.4':
+    resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==}
 
   '@types/mdx@2.0.13':
     resolution: {integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==}
@@ -925,11 +952,14 @@ packages:
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
 
-  '@types/node@22.10.7':
-    resolution: {integrity: sha512-V09KvXxFiutGp6B7XkpaDXlNadZxrzajcY50EuoLIpQ6WWYCSvf19lVIazzfIzQvhUN2HjX12spLojTnhuKlGg==}
+  '@types/node@22.10.10':
+    resolution: {integrity: sha512-X47y/mPNzxviAGY5TcYPtYL8JsY3kAq2n8fMmKoRCxq/c4v4pyGNCzM2R6+M5/umG4ZfHuT+sgqDYqWc9rJ6ww==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
+
+  '@types/prompts@2.4.9':
+    resolution: {integrity: sha512-qTxFi6Buiu8+50/+3DGIWLHM6QuWsEKugJnnP6iv2Mc4ncxE4A/OJkjuVOA+5X0X1S/nq5VJRa8Lu+nwcvbrKA==}
 
   '@types/react-dom@19.0.3':
     resolution: {integrity: sha512-0Knk+HJiMP/qOZgMyNFamlIjw9OFCsyC2ZbigmEEyXXixgre6IQpm/4V+r3qH4GC1JPvRJKInw+on2rV6YZLeA==}
@@ -1136,6 +1166,10 @@ packages:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
 
+  chalk@5.4.1:
+    resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+
   check-error@2.1.1:
     resolution: {integrity: sha512-OAlb+T7V4Op9OwdkjmguYRqncdlx5JiofwOAUkmTF+jNdHwzTaTs4sRAGpzLF3oOz5xAyDGrPgeIDFQmDOTiJw==}
     engines: {node: '>= 16'}
@@ -1182,6 +1216,10 @@ packages:
 
   colord@2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
+
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
+    engines: {node: '>=18'}
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
@@ -1589,6 +1627,10 @@ packages:
       react-dom:
         optional: true
 
+  fs-extra@11.3.0:
+    resolution: {integrity: sha512-Z4XaCL6dUDHfP/jT25jJKMmtxvuwbkrD1vNSMFlo9lNLY2c5FHYSQgHPRZUjAB26TpDEoW9HCOgplrdbaPV/ew==}
+    engines: {node: '>=14.14'}
+
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
@@ -1902,6 +1944,10 @@ packages:
   kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
+
+  kleur@3.0.3:
+    resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
+    engines: {node: '>=6'}
 
   lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
@@ -2543,6 +2589,10 @@ packages:
     resolution: {integrity: sha512-VWQJyU2bcDTgZw8kpfBpB/ejZASlCrzwz5f2hjb/zlujOEB4oeiAhHygAWq8ubsX2GVkD4kCU5V2dwOTaCY5EQ==}
     engines: {node: '>=0.12'}
 
+  prompts@2.4.2:
+    resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
+    engines: {node: '>= 6'}
+
   prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
 
@@ -2773,6 +2823,9 @@ packages:
   signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
+
+  sisteransi@1.0.5:
+    resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -3421,11 +3474,11 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.4.2(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.7)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.4.2(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.10)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))':
     dependencies:
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2(typescript@5.7.3)
-      vite: 6.0.11(@types/node@22.10.7)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.10.10)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0)
     optionalDependencies:
       typescript: 5.7.3
 
@@ -3682,13 +3735,13 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@storybook/builder-vite@8.5.1(storybook@8.5.1)(vite@6.0.11(@types/node@22.10.7)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))':
+  '@storybook/builder-vite@8.5.1(storybook@8.5.1)(vite@6.0.11(@types/node@22.10.10)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))':
     dependencies:
       '@storybook/csf-plugin': 8.5.1(storybook@8.5.1)
       browser-assert: 1.2.1
       storybook: 8.5.1
       ts-dedent: 2.2.0
-      vite: 6.0.11(@types/node@22.10.7)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.10.10)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0)
 
   '@storybook/components@8.5.1(storybook@8.5.1)':
     dependencies:
@@ -3759,11 +3812,11 @@ snapshots:
       react-dom: 19.0.0(react@19.0.0)
       storybook: 8.5.1
 
-  '@storybook/react-vite@8.5.1(@storybook/test@8.5.1(storybook@8.5.1))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(rollup@4.30.1)(storybook@8.5.1)(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.7)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))':
+  '@storybook/react-vite@8.5.1(@storybook/test@8.5.1(storybook@8.5.1))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(rollup@4.30.1)(storybook@8.5.1)(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.10)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.4.2(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.7)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.4.2(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.10)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))
       '@rollup/pluginutils': 5.1.4(rollup@4.30.1)
-      '@storybook/builder-vite': 8.5.1(storybook@8.5.1)(vite@6.0.11(@types/node@22.10.7)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))
+      '@storybook/builder-vite': 8.5.1(storybook@8.5.1)(vite@6.0.11(@types/node@22.10.10)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0))
       '@storybook/react': 8.5.1(@storybook/test@8.5.1(storybook@8.5.1))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.1)(typescript@5.7.3)
       find-up: 5.0.0
       magic-string: 0.30.17
@@ -3773,7 +3826,7 @@ snapshots:
       resolve: 1.22.10
       storybook: 8.5.1
       tsconfig-paths: 4.2.0
-      vite: 6.0.11(@types/node@22.10.7)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.10.10)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0)
     optionalDependencies:
       '@storybook/test': 8.5.1(storybook@8.5.1)
     transitivePeerDependencies:
@@ -3868,20 +3921,34 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/fs-extra@11.0.4':
+    dependencies:
+      '@types/jsonfile': 6.1.4
+      '@types/node': 22.10.10
+
   '@types/hoist-non-react-statics@3.3.6':
     dependencies:
       '@types/react': 19.0.7
       hoist-non-react-statics: 3.3.2
 
+  '@types/jsonfile@6.1.4':
+    dependencies:
+      '@types/node': 22.10.10
+
   '@types/mdx@2.0.13': {}
 
   '@types/minimist@1.2.5': {}
 
-  '@types/node@22.10.7':
+  '@types/node@22.10.10':
     dependencies:
       undici-types: 6.20.0
 
   '@types/normalize-package-data@2.4.4': {}
+
+  '@types/prompts@2.4.9':
+    dependencies:
+      '@types/node': 22.10.10
+      kleur: 3.0.3
 
   '@types/react-dom@19.0.3(@types/react@19.0.7)':
     dependencies:
@@ -4098,6 +4165,8 @@ snapshots:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
+  chalk@5.4.1: {}
+
   check-error@2.1.1: {}
 
   chokidar@3.6.0:
@@ -4139,6 +4208,8 @@ snapshots:
   color-name@1.1.4: {}
 
   colord@2.9.3: {}
+
+  commander@13.1.0: {}
 
   commander@2.20.3: {}
 
@@ -4605,6 +4676,12 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
+  fs-extra@11.3.0:
+    dependencies:
+      graceful-fs: 4.2.11
+      jsonfile: 6.1.0
+      universalify: 2.0.1
+
   fs.realpath@1.0.0: {}
 
   fsevents@2.3.3:
@@ -4865,7 +4942,7 @@ snapshots:
 
   jest-worker@26.6.2:
     dependencies:
-      '@types/node': 22.10.7
+      '@types/node': 22.10.10
       merge-stream: 2.0.0
       supports-color: 7.2.0
 
@@ -4896,6 +4973,8 @@ snapshots:
   jsonparse@1.3.1: {}
 
   kind-of@6.0.3: {}
+
+  kleur@3.0.3: {}
 
   lilconfig@2.1.0: {}
 
@@ -5461,6 +5540,11 @@ snapshots:
 
   promise.series@0.2.0: {}
 
+  prompts@2.4.2:
+    dependencies:
+      kleur: 3.0.3
+      sisteransi: 1.0.5
+
   prop-types@15.8.1:
     dependencies:
       loose-envify: 1.4.0
@@ -5739,6 +5823,8 @@ snapshots:
   shebang-regex@3.0.0: {}
 
   signal-exit@4.1.0: {}
+
+  sisteransi@1.0.5: {}
 
   source-map-js@1.2.1: {}
 
@@ -6071,13 +6157,13 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite@6.0.11(@types/node@22.10.7)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0):
+  vite@6.0.11(@types/node@22.10.10)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
       rollup: 4.30.1
     optionalDependencies:
-      '@types/node': 22.10.7
+      '@types/node': 22.10.10
       fsevents: 2.3.3
       jiti: 1.21.7
       terser: 5.37.0
