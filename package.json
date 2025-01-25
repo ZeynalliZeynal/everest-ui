@@ -17,7 +17,7 @@
   "scripts": {
     "build": "pnpm -r clean && node build.mjs",
     "type-check": "tsc --noEmit",
-    "push": "git push origin main",
+    "push": "git push origin main --follow-tags",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "release": "standard-version"
