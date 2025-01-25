@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@everest-ui/utils": "workspace:*",
-    "@everest-ui/styles": "workspace:*"
+    "@everest-ui/styles": "^1.0.1"
   },
   "devDependencies": {
     "@types/react": "^19.0.7",

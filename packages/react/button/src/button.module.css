@@ -1,5 +1,9 @@
 .variants-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.test {
+  color: #357a14 !important;
 }

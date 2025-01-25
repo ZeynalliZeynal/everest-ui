@@ -2,8 +2,8 @@ import path from "node:path";
 import { globSync } from "glob";
 import * as esbuild from "esbuild";
 import * as tsup from "tsup";
-import { execa } from "execa";
 import fs from "fs";
+import CssModulesPlugin from "esbuild-css-modules-plugin";
 
 async function build(relativePath) {
   const tasks = [];
@@ -34,6 +34,7 @@ async function build(relativePath) {
     format: "cjs",
     target: "es2022",
     outdir: dist,
+    plugins: [CssModulesPlugin],
   };
 
   console.log(`Building ${relativePath}...`);
@@ -41,7 +42,7 @@ async function build(relativePath) {
   tasks.push(
     esbuild
       .build(esbuildConfig)
-      .then(() => console.log(`CJS: Built ${relativePath}`))
+      .then(() => console.log(`CJS: Built ${relativePath}`)),
   );
   tasks.push(
     esbuild
@@ -50,7 +51,7 @@ async function build(relativePath) {
         format: "esm",
         outExtension: { ".js": ".mjs" },
       })
-      .then(() => console.log(`ESM: Built ${relativePath}`))
+      .then(() => console.log(`ESM: Built ${relativePath}`)),
   );
 
   tasks.push(
@@ -62,8 +63,9 @@ async function build(relativePath) {
         outDir: dist,
         silent: false,
         external: [/@everest-ui\/.+/],
+        css: true,
       })
-      .then(() => console.log(`TSC: Built ${relativePath}`))
+      .then(() => console.log(`TSC: Built ${relativePath}`)),
   );
 
   await Promise.all(tasks);
