@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./button";
-import { FiPlus, FiCheck } from "react-icons/fi";
+import { FiCheck, FiPlus } from "react-icons/fi";
 
 type ButtonProps = React.ComponentProps<typeof Button>;
 
@@ -52,17 +52,17 @@ export const Default: Story = {
 
 export const Variants: Story = {
   render: (args) => (
-    <div className='flex flex-wrap gap-4'>
-      <Button {...args} variant='primary'>
+    <div>
+      <Button {...args} variant="primary">
         Primary
       </Button>
-      <Button {...args} variant='secondary'>
+      <Button {...args} variant="secondary">
         Secondary
       </Button>
-      <Button {...args} variant='tertiary'>
+      <Button {...args} variant="tertiary">
         Tertiary
       </Button>
-      <Button {...args} variant='ghost'>
+      <Button {...args} variant="ghost">
         Ghost
       </Button>
     </div>
@@ -74,17 +74,17 @@ export const Variants: Story = {
 
 export const Sizes: Story = {
   render: (args) => (
-    <div className='flex flex-wrap gap-4 items-center'>
-      <Button {...args} size='lg'>
+    <div className="flex flex-wrap gap-4 items-center">
+      <Button {...args} size="lg">
         Large
       </Button>
-      <Button {...args} size='md'>
+      <Button {...args} size="md">
         Medium
       </Button>
-      <Button {...args} size='sm'>
+      <Button {...args} size="sm">
         Small
       </Button>
-      <Button {...args} size='xs'>
+      <Button {...args} size="xs">
         Extra Small
       </Button>
     </div>
@@ -96,7 +96,7 @@ export const Sizes: Story = {
 
 export const WithIcons: Story = {
   render: (args) => (
-    <div className='flex flex-wrap gap-4'>
+    <div className="flex flex-wrap gap-4">
       <Button {...args} prefix={<FiPlus />}>
         Add
       </Button>
@@ -114,17 +114,17 @@ export const WithIcons: Story = {
 
 export const Disabled: Story = {
   render: (args) => (
-    <div className='flex flex-wrap gap-4'>
-      <Button {...args} disabled variant='primary'>
+    <div className="flex flex-wrap gap-4">
+      <Button {...args} disabled variant="primary">
         Primary
       </Button>
-      <Button {...args} disabled variant='secondary'>
+      <Button {...args} disabled variant="secondary">
         Secondary
       </Button>
-      <Button {...args} disabled variant='tertiary'>
+      <Button {...args} disabled variant="tertiary">
         Tertiary
       </Button>
-      <Button {...args} disabled variant='ghost'>
+      <Button {...args} disabled variant="ghost">
         Ghost
       </Button>
     </div>
