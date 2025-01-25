@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.1](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.0.6...v1.8.1) (2025-01-25)
+
+
+### Bug Fixes
+
+* fix Copy function. return the jsx element ([496cb97](https://github.com/ZeynalliZeynal/everest-ui/commit/496cb97c721d96f97095d90f1cad3d0b47dc370b))
+* update typings ([6e37e34](https://github.com/ZeynalliZeynal/everest-ui/commit/6e37e348eb49ccd61a88dfef5eb46ff7c9baec34))
+
 ## [1.8.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.7.0...v1.8.0) (2025-01-25)
 
 
