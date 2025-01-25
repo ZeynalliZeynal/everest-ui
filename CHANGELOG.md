@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.0.2...v1.6.0) (2025-01-25)
+
+
+### Features
+
+* add dropdown-menu package and build ([54b0876](https://github.com/ZeynalliZeynal/everest-ui/commit/54b0876c7de57700fee97255a3d012137100978c))
+
+
+### Bug Fixes
+
+* change target to esnext in tsup config ([9f5a23f](https://github.com/ZeynalliZeynal/everest-ui/commit/9f5a23fb742350e629f06799be9def9b6098b9b4))
+
 ## [1.5.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.3.0...v1.5.0) (2025-01-25)
 
 
