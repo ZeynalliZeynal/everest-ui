@@ -1,18 +1,20 @@
 import { useLayoutEffect, useRef } from "react";
 
-interface OutsideClick {
+export interface UseOutsideClickProps {
   selectors?: string[];
   capturePhase?: boolean;
   action(): void;
 }
 
-interface Restrict {
+export interface UseRestrictProps {
   tab?: "loop" | "disable";
   disableScroll?: boolean;
   condition?: boolean;
 }
 
-export function useRestrict(options: Restrict) {
+export type UseResizeProps = (condition: boolean, callback: () => void) => void;
+
+export function useRestrict(options: UseRestrictProps) {
   const { condition, disableScroll = true, tab } = options;
 
   useLayoutEffect(() => {
@@ -52,7 +54,7 @@ export function useRestrict(options: Restrict) {
   }, [condition]);
 }
 
-export function useOutsideClick(options: OutsideClick) {
+export function useOutsideClick(options: UseOutsideClickProps) {
   const { selectors, capturePhase, action } = options;
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -82,7 +84,7 @@ export function useOutsideClick(options: OutsideClick) {
   return ref;
 }
 
-export const useResize = (condition: boolean, callback: () => void) => {
+export const useResize: UseResizeProps = (condition, callback) => {
   useLayoutEffect(() => {
     if (!condition) return;
     callback();

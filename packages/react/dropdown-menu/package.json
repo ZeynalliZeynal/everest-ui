@@ -1,5 +1,5 @@
 {
-  "name": "@everest-ui/react-hooks",
+  "name": "@everest-ui/react-dropdown-menu",
   "version": "1.0.6",
   "license": "ISC",
   "exports": {
@@ -24,9 +24,12 @@
   ],
   "scripts": {
     "build": "echo 'Build handled by root'",
-    "clean": "rimraf dist",
     "release": "standard-version",
+    "clean": "rimraf dist",
     "publish": "pnpm publish --access public"
+  },
+  "dependencies": {
+    "@everest-ui/react-popper": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19.0.7",
