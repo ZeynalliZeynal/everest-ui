@@ -1,0 +1,60 @@
+{
+  "name": "@everest-ui/react-dropdown-menu",
+  "version": "1.2.6",
+  "license": "ISC",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": {
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "echo 'Build handled by root'",
+    "release": "standard-version",
+    "clean": "rimraf dist",
+    "publish": "pnpm publish --access public"
+  },
+  "dependencies": {
+    "@everest-ui/react-popper": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.3"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc",
+    "react-dom": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+  },
+  "homepage": "https://todoist-liard-alpha.vercel.app/geist/introduction",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeynalliZeynal/everest-ui.git"
+  }
+}
