@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.6.0...v1.7.0) (2025-01-25)
+
+
+### Features
+
+* add copy package ([c1017eb](https://github.com/ZeynalliZeynal/everest-ui/commit/c1017eb3dd29730887438d4ea7bedef734ad204a))
+
+
+### Bug Fixes
+
+* update dropdown-menu version to 1.0.0 ([773a68a](https://github.com/ZeynalliZeynal/everest-ui/commit/773a68af24606cf91f2fa47c282f4668c4b2d3f3))
+
 ## [1.6.0](https://github.com/ZeynalliZeynal/everest-ui/compare/v1.0.2...v1.6.0) (2025-01-25)
 
 
