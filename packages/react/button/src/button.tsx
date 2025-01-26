@@ -1,7 +1,6 @@
 import React from "react";
 import { cn } from "@everest-ui/utils";
 import styles from "./button.module.css";
-import "@everest-ui/styles/dist/tailwind.css";
 
 export interface ButtonProps
   extends Omit<React.ComponentProps<"button">, "prefix"> {

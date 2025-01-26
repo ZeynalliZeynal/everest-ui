@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "3.2.4",
-    "@everest-ui/styles": "^1.0.1",
     "@storybook/addon-essentials": "8.5.1",
     "@storybook/addon-interactions": "8.5.1",
     "@storybook/addon-onboarding": "8.5.1",
@@ -66,5 +65,8 @@
     "tslib": "^2.8.1",
     "tsup": "^8.3.5",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@everest-ui/colors": "^1.2.1"
   }
 }

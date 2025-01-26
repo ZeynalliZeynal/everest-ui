@@ -29,8 +29,7 @@
     "publish": "pnpm publish --access public"
   },
   "dependencies": {
-    "@everest-ui/utils": "workspace:*",
-    "@everest-ui/styles": "^1.0.1"
+    "@everest-ui/utils": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19.0.7",
