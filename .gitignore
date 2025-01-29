@@ -1,18 +1,38 @@
-*.log
-.DS_Store
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
 node_modules
-dist
-test-output.*
-.cache
-.parcel-cache
-storybook-static
+.pnp
+.pnp.js
+
+# Local env files
 .env
-.eslintcache
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Editor-specific
-.vscode
-.idea
+# Testing
+coverage
 
-# So devs can maintain their own todo lists in the project
-TODO.md
-*storybook.log
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Build Outputs
+.next/
+out/
+build
+dist
+
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.DS_Store
+*.pem
