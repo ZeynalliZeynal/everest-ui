@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2s1wSbRqdRDaMeX0NRUXfV5mCas" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortKey" value="BY_TIME_DESCENDING" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.preview.ts.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;monorepo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/Desktop/education/libraries/everest-ui&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;npm.storybook.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\asus\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.25906736&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\asus\\Desktop\\education\\libraries\\everest-ui\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\core\chain" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\core\selectors" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\core\utils" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\button" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\collapse" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\button\src" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\stories" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\colors" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\styles" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="npm run dev" />
+      <command value="npm run storybook" />
+    </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="" />
+      <created>1737636389493</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737636389493</updated>
+      <workItem from="1737636390758" duration="7637000" />
+      <workItem from="1737644321459" duration="4063000" />
+      <workItem from="1737706178138" duration="10232000" />
+      <workItem from="1737730944117" duration="30000" />
+      <workItem from="1737800686574" duration="4536000" />
+      <workItem from="1737841231475" duration="11658000" />
+      <workItem from="1738120781490" duration="2425000" />
+      <workItem from="1738131610052" duration="1721000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
