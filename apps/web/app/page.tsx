@@ -1,6 +1,6 @@
 import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
+import { Button } from "@everest-ui/react-button";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -63,8 +63,14 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-        <Button appName="web" className={styles.secondary}>
-          Open alert
+        <Button size="md" variant="primary" iconOnly>
+          <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+          />
         </Button>
       </main>
       <footer className={styles.footer}>

@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/react/button/src/button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/docs/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/docs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript-config/base.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/typescript-config/base.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript-config/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/typescript-config/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-workspace.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-workspace.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,17 +49,19 @@
     "RunOnceActivity.git.unshallow": "true",
     "code.cleanup.on.save": "true",
     "git-widget-placeholder": "monorepo",
-    "last_opened_file_path": "C:/Users/asus/Desktop/education/libraries/everest-ui",
+    "last_opened_file_path": "C:/Users/asus/Desktop/education/libraries/everest-ui/packages/react/button",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
     "npm.dev.executor": "Run",
     "npm.storybook.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\asus\\AppData\\Roaming\\npm\\node_modules\\prettier",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\asus\\Desktop\\education\\libraries\\everest-ui\\node_modules\\prettier",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "actions.on.save",
     "settings.editor.splitter.proportion": "0.25906736",
     "ts.external.directory.path": "C:\\Users\\asus\\Desktop\\education\\libraries\\everest-ui\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
@@ -55,18 +69,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\button" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\typescript-config" />
       <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\core\chain" />
       <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\core\selectors" />
       <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\core\utils" />
-      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\button" />
-      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\collapse" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\button" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\src" />
+      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\ui" />
       <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\button\src" />
       <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\stories" />
-      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\colors" />
-      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages" />
-      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\styles" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -115,7 +129,8 @@
       <workItem from="1737841231475" duration="11658000" />
       <workItem from="1738120781490" duration="2425000" />
       <workItem from="1738131610052" duration="2547000" />
-      <workItem from="1738237044873" duration="1630000" />
+      <workItem from="1738237044873" duration="1869000" />
+      <workItem from="1738241659376" duration="6435000" />
     </task>
     <servers />
   </component>
