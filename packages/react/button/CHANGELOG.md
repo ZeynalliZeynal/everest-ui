@@ -1,5 +1,11 @@
 # @everest-ui/react-button
 
+## 1.4.0
+
+### Minor Changes
+
+- remove exports in package.json
+
 ## 1.3.0
 
 ### Minor Changes

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="" />
+    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +37,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "code.cleanup.on.save": "true",
     "git-widget-placeholder": "monorepo",
-    "last_opened_file_path": "C:/Users/asus/Desktop/education/libraries/everest-ui/packages/build-config",
+    "last_opened_file_path": "C:/Users/asus/Desktop/education/projects/todoist/client",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -117,7 +119,7 @@
       <workItem from="1738131610052" duration="2547000" />
       <workItem from="1738237044873" duration="1869000" />
       <workItem from="1738241659376" duration="6772000" />
-      <workItem from="1738297443651" duration="11720000" />
+      <workItem from="1738297443651" duration="12850000" />
     </task>
     <servers />
   </component>

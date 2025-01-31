@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/react-button",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "type": "module",
   "files": [
     "dist"
@@ -15,14 +15,6 @@
     "check-types": "tsc --noEmit",
     "build": "rollup -c",
     "clean": "rimraf dist"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./styles": "./dist/index.css"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
