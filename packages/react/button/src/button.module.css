@@ -1,6 +1,22 @@
-@import "../../../../node_modules/.pnpm/@everest-ui+colors@1.2.2/node_modules/@everest-ui/colors/dist/gray.css";
-@import "../../../../node_modules/.pnpm/@everest-ui+colors@1.2.2/node_modules/@everest-ui/colors/dist/gray-alpha.css";
-@import "../../../../node_modules/.pnpm/@everest-ui+colors@1.2.2/node_modules/@everest-ui/colors/dist/base.css";
+@import "@everest-ui/colors/dist/gray.css";
+@import "@everest-ui/colors/dist/gray-alpha.css";
+@import "@everest-ui/colors/dist/base.css";
+
+:root {
+  &[data-theme="light"],
+  &.light,
+  &.light-theme {
+    --button-invert-disabled-dark: 0, 0%, 10%;
+    --button-invert-hover-dark: 0, 0%, 22%;
+  }
+
+  &[data-theme="dark"],
+  &.dark,
+  &.dark-theme {
+    --button-invert-disabled-dark: 0 0% 95%;
+    --button-invert-hover-dark: 0 0% 80%;
+  }
+}
 
 .button {
   align-items: center;
@@ -45,7 +61,7 @@
 }
 
 .secondary[data-hover] {
-  background-color: hsl(0 0% 80%);
+  background-color: hsl(var(--button-invert-hover-dark));
   color: var(--ds-background-200);
 }
 

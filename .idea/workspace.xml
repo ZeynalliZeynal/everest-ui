@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="" />
+    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react/button/src/button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/button/src/button.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +39,8 @@
     "RunOnceActivity.git.unshallow": "true",
     "code.cleanup.on.save": "true",
     "git-widget-placeholder": "monorepo",
+    "javascript.nodejs.core.library.configured.version": "20.17.0",
+    "javascript.nodejs.core.library.typings.version": "20.17.16",
     "last_opened_file_path": "C:/Users/asus/Desktop/education/projects/todoist/client",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -43,6 +49,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
+    "npm.colors > build.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.storybook.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\asus\\Desktop\\education\\libraries\\everest-ui\\node_modules\\prettier",
@@ -75,7 +82,17 @@
       <command value="npm run dev" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.colors &gt; build">
+    <configuration name="colors &gt; build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/colors/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -88,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.colors &gt; build" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -117,7 +135,7 @@
       <workItem from="1738131610052" duration="2547000" />
       <workItem from="1738237044873" duration="1869000" />
       <workItem from="1738241659376" duration="6772000" />
-      <workItem from="1738297443651" duration="13229000" />
+      <workItem from="1738297443651" duration="15499000" />
     </task>
     <servers />
   </component>

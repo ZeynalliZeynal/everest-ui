@@ -1,5 +1,11 @@
 # @everest-ui/react-button
 
+## 1.6.0
+
+### Minor Changes
+
+- Add css variables for dark mode for secondary variant
+
 ## 1.5.0
 
 ### Minor Changes
