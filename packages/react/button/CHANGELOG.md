@@ -1,5 +1,11 @@
 # @everest-ui/react-button
 
+## 1.7.1
+
+### Patch Changes
+
+- Update version of colors package
+
 ## 1.7.0
 
 ### Minor Changes

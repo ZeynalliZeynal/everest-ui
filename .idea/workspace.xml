@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/docs/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/docs/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/docs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/build-config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/build-config/rollup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/button/src/button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/button/src/button.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/button/src/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/button/src/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +131,7 @@
       <workItem from="1738131610052" duration="2547000" />
       <workItem from="1738237044873" duration="1869000" />
       <workItem from="1738241659376" duration="6772000" />
-      <workItem from="1738297443651" duration="18334000" />
+      <workItem from="1738297443651" duration="18670000" />
     </task>
     <servers />
   </component>
