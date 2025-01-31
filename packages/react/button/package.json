@@ -1,27 +1,30 @@
 {
   "name": "@everest-ui/react-button",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
-    "build": "tsc",
+    "build": "rollup -c",
     "clean": "rimraf dist"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@turbo/gen": "^2.3.4",
     "@types/node": "^22.10.10",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
-    "esbuild-css-modules-plugin": "^3.1.4",
-    "tsup": "^8.3.6",
-    "typescript": "5.7.3"
+    "rollup": "^4.32.1",
+    "typescript": "5.7.3",
+    "@everest-ui/build-config": "workspace:*"
   },
   "dependencies": {
     "@everest-ui/colors": "^1.2.2",
@@ -33,7 +36,8 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "react": "^18.0 || ^19.0 || ^19.0.0-rc",
-    "react-dom": "^18.0 || ^19.0 || ^19.0.0-rc"
+    "react-dom": "^18.0 || ^19.0 || ^19.0.0-rc",
+    "@everest-ui/colors": "latest"
   },
   "peerDependenciesMeta": {
     "@types/react": {

@@ -72,6 +72,7 @@ export default function Home() {
             height={16}
           />
         </Button>
+        <Button variant="tertiary">Lakals</Button>
       </main>
       <footer className={styles.footer}>
         <a
