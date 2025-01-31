@@ -1,5 +1,11 @@
 # @everest-ui/react-button
 
+## 1.3.0
+
+### Minor Changes
+
+- Export index file from dist in package.json
+
 ## 1.2.5
 
 ### Patch Changes
