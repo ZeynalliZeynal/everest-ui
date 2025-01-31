@@ -1,5 +1,19 @@
 # web
 
+## 2.0.8
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/react-button@1.6.2
+
+## 2.0.7
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/react-button@1.6.1
+
 ## 2.0.6
 
 ### Patch Changes

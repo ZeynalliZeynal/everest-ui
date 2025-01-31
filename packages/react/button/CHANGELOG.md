@@ -1,5 +1,17 @@
 # @everest-ui/react-button
 
+## 1.6.2
+
+### Patch Changes
+
+- Update css variable
+
+## 1.6.1
+
+### Patch Changes
+
+- Add iconOnly and innerPadding classes
+
 ## 1.6.0
 
 ### Minor Changes

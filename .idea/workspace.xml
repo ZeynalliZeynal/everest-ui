@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/button/src/button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/button/src/button.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +133,7 @@
       <workItem from="1738131610052" duration="2547000" />
       <workItem from="1738237044873" duration="1869000" />
       <workItem from="1738241659376" duration="6772000" />
-      <workItem from="1738297443651" duration="15499000" />
+      <workItem from="1738297443651" duration="16193000" />
     </task>
     <servers />
   </component>

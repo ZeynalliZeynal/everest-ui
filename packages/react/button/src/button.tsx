@@ -57,7 +57,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {prefix}
         {children && (
-          <span className={clsx(iconOnly ? styles.iconOnly : styles.padding)}>
+          <span
+            className={clsx(iconOnly ? styles.iconOnly : styles.innerPadding)}
+          >
             {children}
           </span>
         )}
