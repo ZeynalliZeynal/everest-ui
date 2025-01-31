@@ -27,6 +27,13 @@
   font-weight: 500;
   justify-content: center;
   transition: all 0.2s ease-in-out;
+
+  &:disabled {
+    background-color: var(--ds-gray-100);
+    border-color: var(--ds-gray-400);
+    color: var(--ds-gray-700);
+    cursor: not-allowed;
+  }
 }
 
 /* Variants */
@@ -71,17 +78,6 @@
 
 .ghost[data-hover] {
   color: var(--ds-gray-1000);
-}
-
-/* Disabled States */
-.disabled {
-  background-color: var(--ds-gray-100);
-  border-color: var(--ds-gray-400);
-  color: var(--ds-gray-700);
-}
-
-.inner-padding {
-  padding: 0 6px;
 }
 
 /* Sizes */
@@ -138,4 +134,10 @@
   font-size: 0.75rem;
   height: 1.5rem;
   width: 1.5rem;
+}
+
+/* Inner element */
+.innerPadding {
+  display: inline-flex;
+  padding: 0 6px;
 }

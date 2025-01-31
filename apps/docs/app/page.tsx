@@ -63,7 +63,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-        <Button>Open alert</Button>
+        <Button variant="tertiary">Open</Button>
       </main>
       <footer className={styles.footer}>
         <a

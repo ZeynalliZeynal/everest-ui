@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "type": "module",
   "private": true,
   "scripts": {
@@ -14,7 +14,8 @@
     "@everest-ui/react-button": "workspace:*",
     "next": "^15.1.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "@everest-ui/colors": "^1.2.2"
   },
   "devDependencies": {
     "@everest-ui/typescript-config": "workspace:*",

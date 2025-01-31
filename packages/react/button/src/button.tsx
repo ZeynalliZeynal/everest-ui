@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./button.module.css";
-import { clsx } from "clsx";
+import clsx from "clsx";
 
 export interface ButtonProps
   extends Omit<React.ComponentProps<"button">, "prefix"> {
@@ -27,7 +27,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       className,
       suffix,
       prefix,
-      iconOnly,
+      iconOnly = false,
       ...etc
     },
     ref,
@@ -58,7 +58,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {prefix}
         {children && (
           <span
-            className={clsx(iconOnly ? styles.iconOnly : styles.innerPadding)}
+            className={`${iconOnly ? styles.iconOnly : styles.innerPadding}`}
           >
             {children}
           </span>
