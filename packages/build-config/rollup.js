@@ -31,7 +31,7 @@ export default {
     terser(),
     postcss({
       modules: true,
-      extract: false,
+      extract: true,
       minimize: true,
     }),
     useClientDirectivePlugin(),

@@ -1,5 +1,11 @@
 # @everest-ui/react-button
 
+## 1.2.5
+
+### Patch Changes
+
+- export styles in package.json to make it easy to use the styles
+
 ## 1.2.4
 
 ### Patch Changes
