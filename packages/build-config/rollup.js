@@ -21,6 +21,7 @@ export default {
       file: "dist/index.js",
       format: "esm",
       sourcemap: true,
+      minimize: false,
     },
   ],
   plugins: [
@@ -31,7 +32,7 @@ export default {
     terser(),
     postcss({
       modules: true,
-      extract: true,
+      extract: false,
       minimize: true,
     }),
     useClientDirectivePlugin(),
