@@ -1,5 +1,12 @@
 # docs
 
+## 2.0.11
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/react-button@1.7.2
+
 ## 2.0.10
 
 ### Patch Changes

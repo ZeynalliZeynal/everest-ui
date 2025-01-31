@@ -1,6 +1,6 @@
 import Image, { type ImageProps } from "next/image";
 import styles from "./page.module.css";
-import { Button } from "@everest-ui/react-button";
+import { Button } from "@everest-ui/geist-button";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;

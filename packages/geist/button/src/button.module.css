@@ -1,6 +1,6 @@
-@import "@everest-ui/colors/dist/gray.css";
-@import "@everest-ui/colors/dist/gray-alpha.css";
-@import "@everest-ui/colors/dist/base.css";
+@import "@everest-ui/geist-colors/gray.css";
+@import "@everest-ui/geist-colors/gray-alpha.css";
+@import "@everest-ui/geist-colors/base.css";
 
 :root {
   &[data-theme="light"],
@@ -21,7 +21,7 @@
 .button {
   align-items: center;
   border: 1px solid var(--ds-gray-alpha-400);
-  border-radius: 0.5rem;
+  border-radius: 6px;
   cursor: pointer;
   display: flex;
   font-weight: 500;
@@ -100,6 +100,7 @@
 }
 
 .xs {
+  border-radius: 0.25rem;
   font-size: 0.75rem;
   height: 1.5rem;
   padding: 0 0.25rem;

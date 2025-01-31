@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "type": "module",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@everest-ui/react-button": "workspace:*",
+    "@everest-ui/geist-button": "workspace:*",
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "type": "module",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@everest-ui/colors": "^1.2.2",
-    "@everest-ui/react-button": "workspace:*",
+    "@everest-ui/geist-button": "workspace:*",
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

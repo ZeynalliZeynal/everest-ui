@@ -1,6 +1,6 @@
 {
-  "name": "@everest-ui/react-button",
-  "version": "1.7.1",
+  "name": "@everest-ui/geist-button",
+  "version": "1.0.0",
   "type": "module",
   "files": [
     "dist"
@@ -27,7 +27,7 @@
     "@everest-ui/build-config": "workspace:*"
   },
   "dependencies": {
-    "@everest-ui/colors": "^1.2.2",
+    "@everest-ui/geist-colors": "workspace:*",
     "clsx": "^2.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -37,7 +37,7 @@
     "@types/react-dom": "*",
     "react": "^18.0 || ^19.0 || ^19.0.0-rc",
     "react-dom": "^18.0 || ^19.0 || ^19.0.0-rc",
-    "@everest-ui/colors": "^1.2.2"
+    "@everest-ui/geist-colors": "workspace:*"
   },
   "peerDependenciesMeta": {
     "@types/react": {
