@@ -24,7 +24,8 @@
     "@types/react-dom": "19.0.3",
     "rollup": "^4.32.1",
     "typescript": "5.7.3",
-    "@everest-ui/build-config": "workspace:*"
+    "@everest-ui/build-config": "workspace:*",
+    "@everest-ui/typescript-config": "workspace:*"
   },
   "dependencies": {
     "@everest-ui/geist-colors": "workspace:*",
