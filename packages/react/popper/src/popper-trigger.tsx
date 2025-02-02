@@ -55,6 +55,6 @@ export function PopperTrigger(props: PopperTriggerProps) {
       ),
     } as HTMLAttributes<HTMLElement>)
   ) : (
-    <button>{children}</button>
+    <button {...attrs}>{children}</button>
   );
 }
