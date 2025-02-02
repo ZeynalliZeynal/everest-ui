@@ -1,9 +1,8 @@
+import { useResize } from "@everest-ui/react-hooks";
+import { chain, cn } from "@everest-ui/utils";
 import React, { HTMLAttributes, useCallback } from "react";
 import { usePopper } from "./popper-context";
 import { PopperTriggerProps } from "./popper.types";
-import { useResize } from "@everest-ui/react-hooks";
-import { chain, cn } from "@everest-ui/utils";
-import { Button } from "@everest-ui/geist-button";
 
 export function PopperTrigger(props: PopperTriggerProps) {
   const {

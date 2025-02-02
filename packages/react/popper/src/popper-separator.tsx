@@ -1,5 +1,4 @@
 import React from "react";
-import { cn } from "@everest-ui/utils";
 
 export const PopperSeparator = React.forwardRef<
   HTMLDivElement,

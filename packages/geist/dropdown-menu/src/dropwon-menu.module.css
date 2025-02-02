@@ -1,0 +1,91 @@
+@import "@everest-ui/geist-colors/gray.css";
+@import "@everest-ui/geist-colors/gray-alpha.css";
+@import "@everest-ui/geist-colors/base.css";
+
+:root {
+  --border: var(--ds-gray-alpha-400);
+  --content-radius: 0.75rem;
+  --content-padding: 0.5rem;
+  --item-height: 2.5rem;
+  --item-padding: 0 0.5rem;
+}
+
+.trigger {
+  align-items: center;
+  border: 1px solid var(--ds-gray-alpha-400);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--ds-background-200);
+  color: var(--ds-gray-1000);
+  font-size: 0.875rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+
+  &:hover {
+    background-color: var(--ds-gray-alpha-200);
+    border-color: var(--ds-gray-alpha-200);
+    color: var(--ds-gray-1000);
+  }
+
+  &:disabled {
+    background-color: var(--ds-gray-100);
+    border-color: var(--ds-gray-400);
+    color: var(--ds-gray-700);
+    cursor: not-allowed;
+  }
+}
+
+.content {
+  font-family: inherit;
+  border: 1px solid var(--border);
+  border-radius: var(--content-radius);
+  padding: var(--content-padding);
+  background-color: var(--ds-background-100);
+  margin-top: 0.75rem;
+
+  min-width: 200px;
+
+  outline: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--item-padding);
+  border-radius: calc(var(--content-radius) - var(--content-padding));
+  cursor: pointer;
+  height: var(--item-height);
+  transition: all 200ms ease-in-out;
+  outline: none;
+
+  &:focus {
+    background-color: var(--ds-gray-alpha-100);
+  }
+
+  &[data-disabled] {
+    pointer-events: none;
+    color: var(--ds-gray-500);
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  height: var(--item-height);
+}
+
+.separator {
+  margin: 0.5rem calc(var(--content-padding) * -1);
+  height: 1px;
+  background-color: var(--border);
+}

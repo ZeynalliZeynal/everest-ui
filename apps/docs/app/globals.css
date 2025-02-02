@@ -19,8 +19,9 @@ body {
 }
 
 body {
-  background: var(--background);
+  background: #000;
   color: var(--foreground);
+  font-family: var(--font-geist-sans);
 }
 
 * {

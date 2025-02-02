@@ -1,23 +1,32 @@
 import { Button } from "@everest-ui/geist-button";
 import styles from "./page.module.css";
 import {
-  Popper,
-  PopperContent,
-  PopperItem,
-  PopperTrigger,
-} from "@everest-ui/react-popper";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@everest-ui/geist-dropdown-menu";
 
 export default function Page() {
   return (
     <div className={styles.page}>
       <Button>Test</Button>
-      <Popper>
-        <PopperTrigger>popper</PopperTrigger>
-        <PopperContent>
-          <PopperItem>Profile</PopperItem>
-          <PopperItem>Logout</PopperItem>
-        </PopperContent>
-      </Popper>
+      <DropdownMenu>
+        <DropdownMenuTrigger>popper</DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuGroup>
+            <DropdownMenuLabel>Label</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Profile</DropdownMenuItem>
+            <DropdownMenuItem>Favorite</DropdownMenuItem>
+            <DropdownMenuItem disabled>Disabled</DropdownMenuItem>
+            <DropdownMenuItem>Logout</DropdownMenuItem>
+          </DropdownMenuGroup>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }

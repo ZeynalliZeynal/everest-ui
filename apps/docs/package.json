@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "type": "module",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@everest-ui/geist-button": "workspace:*",
-    "@everest-ui/react-popper": "workspace:*",
+    "@everest-ui/geist-dropdown-menu": "workspace:*",
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

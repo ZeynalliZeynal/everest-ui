@@ -1,6 +1,6 @@
 {
-  "name": "@everest-ui/react-popper",
-  "version": "1.4.0",
+  "name": "@everest-ui/geist-dropdown-menu",
+  "version": "1.1.0",
   "type": "module",
   "files": [
     "dist"
@@ -8,12 +8,18 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    }
+  },
   "sideEffects": false,
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
-    "build": "tsup",
+    "build": "rollup -c",
     "clean": "rimraf dist"
   },
   "devDependencies": {
@@ -21,28 +27,24 @@
     "@types/node": "^22.10.10",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
-    "tsup": "^8.3.6",
-    "typescript": "5.7.3",
+    "rollup": "^4.34.0",
     "react-focus-lock": "^2.13.5",
     "@everest-ui/build-config": "workspace:*",
     "@everest-ui/typescript-config": "workspace:*",
-    "@everest-ui/react-hooks": "workspace:*",
-    "@everest-ui/react-selectors": "workspace:*",
-    "@everest-ui/react-utils": "workspace:*",
-    "@everest-ui/utils": "workspace:*"
+    "@everest-ui/react-popper": "workspace:*"
   },
   "dependencies": {
     "clsx": "^2.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "framer-motion": "^12.0.6"
+    "@everest-ui/geist-colors": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",
     "@types/react-dom": "*",
     "react": "^18.0 || ^19.0 || ^19.0.0-rc",
     "react-dom": "^18.0 || ^19.0 || ^19.0.0-rc",
-    "framer-motion": "^11.0.0 || ^12.0.0 || ^12.0.6"
+    "@everest-ui/geist-colors": "^1.1.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {

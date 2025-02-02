@@ -1,5 +1,12 @@
 # docs
 
+## 2.0.14
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/geist-dropdown-menu@1.1.0
+
 ## 2.0.13
 
 ### Patch Changes
