@@ -1,0 +1,30 @@
+{
+  "name": "@everest-ui/react-selectors",
+  "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit",
+    "build": "tsup",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.3.4",
+    "@types/node": "^22.10.10",
+    "tsup": "^8.3.6",
+    "typescript": "5.7.3",
+    "@everest-ui/build-config": "workspace:*",
+    "@everest-ui/typescript-config": "workspace:*"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1"
+  }
+}

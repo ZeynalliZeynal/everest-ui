@@ -1,5 +1,12 @@
 # docs
 
+## 2.0.12
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/react-popper@1.3.0
+
 ## 2.0.11
 
 ### Patch Changes

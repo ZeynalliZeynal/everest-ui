@@ -1,0 +1,61 @@
+{
+  "name": "@everest-ui/react-popper",
+  "version": "1.3.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit",
+    "build": "tsup",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.3.4",
+    "@types/node": "^22.10.10",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "tsup": "^8.3.6",
+    "typescript": "5.7.3",
+    "react-focus-lock": "^2.13.5",
+    "@everest-ui/build-config": "workspace:*",
+    "@everest-ui/typescript-config": "workspace:*",
+    "@everest-ui/react-hooks": "workspace:*",
+    "@everest-ui/react-selectors": "workspace:*",
+    "@everest-ui/react-utils": "workspace:*",
+    "@everest-ui/utils": "workspace:*",
+    "@everest-ui/geist-button": "workspace:*"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "framer-motion": "^12.0.6"
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": "^18.0 || ^19.0 || ^19.0.0-rc",
+    "react-dom": "^18.0 || ^19.0 || ^19.0.0-rc",
+    "framer-motion": "^11.0.0 || ^12.0.0 || ^12.0.6"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "homepage": "https://todoist-liard-alpha.vercel.app/geist/introduction",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeynalliZeynal/everest-ui.git"
+  }
+}
