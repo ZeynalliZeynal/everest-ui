@@ -1,3 +1,5 @@
+import { AlignProps, SideProps } from "@everest-ui/react-utils";
+
 export interface PopperProviderProps {
   isOpen: boolean;
   triggerPosition: DOMRect | null;
@@ -28,12 +30,9 @@ export interface PopperTriggerProps
   suffix?: React.ReactNode;
 }
 
-export type PopperContentSideProps = "top" | "right" | "bottom" | "left";
-export type PopperContentAlignProps = "start" | "center" | "end";
-
 export interface PopperContentProps extends React.ComponentProps<"div"> {
-  align?: PopperContentAlignProps;
-  side?: PopperContentSideProps;
+  align?: AlignProps;
+  side?: SideProps;
   asChild?: boolean;
 }
 
@@ -80,8 +79,8 @@ export interface PopperTriggerProps
 }
 
 export interface PopperContentProps extends React.ComponentProps<"div"> {
-  align?: PopperContentAlignProps;
-  side?: PopperContentSideProps;
+  align?: AlignProps;
+  side?: SideProps;
   asChild?: boolean;
 }
 

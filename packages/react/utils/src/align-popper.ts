@@ -1,7 +1,5 @@
-import {
-  PopperContentAlignProps,
-  PopperContentSideProps,
-} from "./popper.types";
+export type SideProps = "top" | "right" | "bottom" | "left";
+export type AlignProps = "start" | "center" | "end";
 
 export function alignPopper({
   side,
@@ -9,8 +7,8 @@ export function alignPopper({
   triggerPosition,
   element,
 }: {
-  side: PopperContentSideProps;
-  align: PopperContentAlignProps;
+  side: SideProps;
+  align: AlignProps;
   triggerPosition: DOMRect;
   element: HTMLDivElement;
 }) {

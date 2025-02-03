@@ -75,7 +75,13 @@ export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
         ),
       } as HTMLAttributes<HTMLElement>)
     ) : (
-      <div {...attrs}>{children}</div>
+      <div {...attrs}>
+        <span>
+          {prefix}
+          {children}
+        </span>
+        {suffix}
+      </div>
     );
   }
 );

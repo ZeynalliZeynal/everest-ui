@@ -1,5 +1,11 @@
 # @everest-ui/react-popper
 
+## 1.6.0
+
+### Minor Changes
+
+- Add sub popper files
+
 ## 1.5.0
 
 ### Minor Changes

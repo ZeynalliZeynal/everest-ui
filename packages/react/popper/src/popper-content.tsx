@@ -10,8 +10,11 @@ import {
 } from "@everest-ui/react-selectors";
 import { chain } from "@everest-ui/utils";
 import { PopperContentProps } from "./popper.types";
-import { keyboardArrowNavigation, mergeRefs } from "@everest-ui/react-utils";
-import { alignPopper } from "./align-popper";
+import {
+  keyboardArrowNavigation,
+  mergeRefs,
+  alignPopper,
+} from "@everest-ui/react-utils";
 import clsx from "clsx";
 
 export const PopperContent = React.forwardRef<

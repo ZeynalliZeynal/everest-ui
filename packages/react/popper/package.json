@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/react-popper",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "type": "module",
   "files": [
     "dist"
@@ -17,32 +17,33 @@
     "clean": "rimraf dist"
   },
   "devDependencies": {
+    "@everest-ui/build-config": "workspace:*",
+    "@everest-ui/react-hooks": "workspace:*",
+    "@everest-ui/react-selectors": "workspace:*",
+    "@everest-ui/react-utils": "workspace:*",
+    "@everest-ui/typescript-config": "workspace:*",
+    "@everest-ui/utils": "workspace:*",
     "@turbo/gen": "^2.3.4",
     "@types/node": "^22.10.10",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
-    "tsup": "^8.3.6",
-    "typescript": "5.7.3",
     "react-focus-lock": "^2.13.5",
-    "@everest-ui/build-config": "workspace:*",
-    "@everest-ui/typescript-config": "workspace:*",
-    "@everest-ui/react-hooks": "workspace:*",
-    "@everest-ui/react-selectors": "workspace:*",
-    "@everest-ui/react-utils": "workspace:*",
-    "@everest-ui/utils": "workspace:*"
+    "tsup": "^8.3.6",
+    "typescript": "5.7.3"
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "framer-motion": "^12.0.6",
+    "lucide-react": "^0.474.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "framer-motion": "^12.0.6"
+    "react-dom": "^19.0.0"
   },
   "peerDependencies": {
     "@types/react": "*",
     "@types/react-dom": "*",
+    "framer-motion": "^11.0.0 || ^12.0.0 || ^12.0.6",
     "react": "^18.0 || ^19.0 || ^19.0.0-rc",
-    "react-dom": "^18.0 || ^19.0 || ^19.0.0-rc",
-    "framer-motion": "^11.0.0 || ^12.0.0 || ^12.0.6"
+    "react-dom": "^18.0 || ^19.0 || ^19.0.0-rc"
   },
   "peerDependenciesMeta": {
     "@types/react": {
