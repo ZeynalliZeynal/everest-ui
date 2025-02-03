@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@everest-ui/geist-button": "workspace:*",
-    "@everest-ui/geist-dropdown-menu": "workspace:*",
+    "@everest-ui/geist-dropdown-menu": "^1.1.1",
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

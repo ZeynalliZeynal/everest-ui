@@ -1,5 +1,11 @@
 # @everest-ui/react-popper
 
+## 1.5.0
+
+### Minor Changes
+
+- Add a check block to resolve the "document is undefined" issue
+
 ## 1.4.0
 
 ### Minor Changes

@@ -91,6 +91,10 @@ export const PopperContent = React.forwardRef<
     ...etc,
   } as HTMLAttributes<HTMLDivElement>;
 
+  if (typeof document === "undefined") {
+    return null;
+  }
+
   return createPortal(
     <AnimatePresence onExitComplete={() => activeTrigger?.focus()}>
       {isOpen && triggerPosition && (
