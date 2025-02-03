@@ -14,19 +14,23 @@
 
 @keyframes animate-in {
   0% {
+    transform: scale(0.95);
     opacity: 0;
   }
   100% {
+    transform: scale(1);
     opacity: 1;
   }
 }
 
 @keyframes animate-out {
   0% {
+    transform: scale(1);
     opacity: 1;
   }
   100% {
     opacity: 0;
+    transform: scale(0.95);
   }
 }
 
@@ -72,10 +76,10 @@
   outline: none;
 
   &[data-state="open"] {
-    animation: animate-in 0.5s forwards;
+    animation: animate-in 0.2s forwards;
   }
   &[data-state="closed"] {
-    animation: animate-out 0.5s forwards;
+    animation: animate-out 0.2s forwards;
   }
 }
 
