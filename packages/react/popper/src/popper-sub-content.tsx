@@ -18,6 +18,7 @@ export const PopperSubContent = React.forwardRef<
   const { highlight, isOpen: isParentOpen } = usePopper();
   const {
     isOpen,
+    isMounted,
     triggerPosition,
     closePopper,
     activeTrigger,
@@ -48,7 +49,7 @@ export const PopperSubContent = React.forwardRef<
       event.clientY
     );
     if (relatedTarget && relatedTarget !== activeTrigger) {
-      // closePopper();
+      closePopper();
     }
   }
 
@@ -103,46 +104,21 @@ export const PopperSubContent = React.forwardRef<
     return null;
   }
 
-  return createPortal(
-    <AnimatePresence>
-      {isParentOpen && isOpen && triggerPosition && (
-        <motion.div
-          animate={{
-            opacity: 1,
-            scale: 1,
-            x: 0,
-          }}
-          initial={{
-            opacity: 0,
-            x: 16,
-          }}
-          exit={{
-            opacity: 0,
-            scale: 0.8,
-          }}
-          style={{
-            position: "fixed",
-            pointerEvents: "auto",
-            zIndex: 100,
-            ...style,
-          }}
-        >
-          {asChild && React.isValidElement(children) ? (
-            React.cloneElement(children, {
-              ...attrs,
-              className: clsx(
-                className,
-                (children.props as React.ComponentProps<"div">).className
-              ),
-            } as HTMLAttributes<HTMLElement>)
-          ) : (
-            <div {...attrs}>{children}</div>
-          )}
-        </motion.div>
-      )}
-    </AnimatePresence>,
-    document.body.querySelector("[data-popper-wrapper]")?.parentElement ||
-      document.body
-  );
+  if (isParentOpen && isOpen && triggerPosition)
+    return createPortal(
+      <div
+        {...attrs}
+        style={{
+          position: "fixed",
+          pointerEvents: "auto",
+          zIndex: 100,
+          ...style,
+        }}
+      >
+        {children}
+      </div>,
+      document.body.querySelector("[data-popper-wrapper]")?.parentElement ||
+        document.body
+    );
 });
 PopperSubContent.displayName = "PopperSubContent";

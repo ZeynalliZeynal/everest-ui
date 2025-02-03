@@ -8,6 +8,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
 } from "@everest-ui/geist-dropdown-menu";
 
 export default function Page() {
@@ -21,6 +24,13 @@ export default function Page() {
             <DropdownMenuLabel>Label</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>Profile</DropdownMenuItem>
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger>Favorite</DropdownMenuSubTrigger>
+              <DropdownMenuSubContent>
+                <DropdownMenuItem>Templates</DropdownMenuItem>
+                <DropdownMenuItem>Projects</DropdownMenuItem>
+              </DropdownMenuSubContent>
+            </DropdownMenuSub>
             <DropdownMenuItem disabled>Disabled</DropdownMenuItem>
             <DropdownMenuItem>Logout</DropdownMenuItem>
           </DropdownMenuGroup>

@@ -18,6 +18,7 @@ export function usePopperSub() {
 
 export function PopperSub({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  const [isMounted, setIsMounted] = React.useState(false);
   const [triggerPosition, setTriggerPosition] = useState<DOMRect | null>(null);
   const [highlightedIndex, setHighlightedIndex] = React.useState<
     number | undefined
@@ -43,10 +44,36 @@ export function PopperSub({ children }: { children: React.ReactNode }) {
     },
     []
   );
-
   function closePopper() {
-    setIsOpen(false);
-    console.log(true);
+    setIsMounted(true);
+
+    const popperContent = document.querySelector(
+      POPPER_SUB_CONTENT_SELECTOR
+    ) as HTMLElement;
+
+    if (!popperContent) {
+      setIsMounted(false);
+      setIsOpen(false);
+    }
+
+    const hasAnimation =
+      window.getComputedStyle(popperContent).animationDuration !== "0s" ||
+      window.getComputedStyle(popperContent).transitionDuration !== "0s";
+
+    const duration = Number(
+      window.getComputedStyle(popperContent).animationDuration.split("s")[0] ||
+        window.getComputedStyle(popperContent).transitionDuration.split("s")[0]
+    );
+
+    if (hasAnimation) {
+      setTimeout(() => {
+        setIsMounted(false);
+        setIsOpen(false);
+      }, duration * 1000);
+    } else {
+      setIsMounted(true);
+      setIsOpen(false);
+    }
   }
 
   React.useEffect(() => {
@@ -66,6 +93,7 @@ export function PopperSub({ children }: { children: React.ReactNode }) {
     <PopperSubContext.Provider
       value={{
         isOpen,
+        isMounted,
         openPopper,
         closePopper,
         triggerPosition,
