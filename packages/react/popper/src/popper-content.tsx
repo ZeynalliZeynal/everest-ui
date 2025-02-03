@@ -1,21 +1,19 @@
-import { usePopper } from "./popper-context";
-import { createPortal } from "react-dom";
-import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick, useResize } from "@everest-ui/react-hooks";
-import React, { HTMLAttributes, useCallback } from "react";
-import ReactFocusLock from "react-focus-lock";
 import {
   POPPER_ITEM_SELECTOR,
   POPPER_SUB_CONTENT_SELECTOR,
 } from "@everest-ui/react-selectors";
-import { chain } from "@everest-ui/utils";
-import { PopperContentProps } from "./popper.types";
 import {
+  alignPopper,
   keyboardArrowNavigation,
   mergeRefs,
-  alignPopper,
 } from "@everest-ui/react-utils";
-import clsx from "clsx";
+import { chain } from "@everest-ui/utils";
+import React, { useCallback } from "react";
+import { createPortal } from "react-dom";
+import ReactFocusLock from "react-focus-lock";
+import { usePopper } from "./popper-context";
+import { PopperContentProps } from "./popper.types";
 
 export const PopperContent = React.forwardRef<
   HTMLDivElement,

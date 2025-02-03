@@ -1,5 +1,11 @@
 # @everest-ui/react-popper
 
+## 1.7.0
+
+### Minor Changes
+
+- Change closing state logic. Remove framer-motion as it is now unnecessary.
+
 ## 1.6.0
 
 ### Minor Changes
