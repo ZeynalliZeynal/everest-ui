@@ -1,5 +1,11 @@
 # @everest-ui/geist-dropdown-menu
 
+## 1.2.0
+
+### Minor Changes
+
+- Add animation to the content
+
 ## 1.1.1
 
 ### Patch Changes
