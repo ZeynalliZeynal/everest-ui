@@ -8,6 +8,10 @@ import {
   PopperLabel,
   PopperProps,
   PopperSeparator,
+  PopperSub,
+  PopperSubContent,
+  PopperSubContentProps,
+  PopperSubTrigger,
   PopperTrigger,
   PopperTriggerProps,
 } from "@everest-ui/react-popper";
@@ -67,5 +71,30 @@ export function DropdownMenuSeparator({
 }: React.ComponentProps<"div">) {
   return (
     <PopperSeparator className={clsx(styles.separator, className)} {...rest} />
+  );
+}
+
+export function DropdownMenuSub(props: PopperProps) {
+  return <PopperSub {...props} />;
+}
+
+export function DropdownMenuSubContent({
+  className,
+  ...rest
+}: PopperSubContentProps) {
+  return (
+    <PopperSubContent
+      className={clsx(styles.subContent, className)}
+      {...rest}
+    />
+  );
+}
+
+export function DropdownMenuSubTrigger({
+  className,
+  ...rest
+}: PopperItemProps) {
+  return (
+    <PopperSubTrigger className={clsx(styles.item, className)} {...rest} />
   );
 }

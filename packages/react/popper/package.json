@@ -16,6 +16,9 @@
     "build": "tsup",
     "clean": "rimraf dist"
   },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "devDependencies": {
     "@everest-ui/build-config": "workspace:*",
     "@everest-ui/react-hooks": "workspace:*",

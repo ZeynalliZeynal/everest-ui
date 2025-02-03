@@ -23,7 +23,6 @@ export const PopperContent = React.forwardRef<
 >((props, forwardRef) => {
   const {
     children,
-    className,
     align = "center",
     side = "bottom",
     asChild,
@@ -39,6 +38,7 @@ export const PopperContent = React.forwardRef<
     setHighlightedIndex,
     highlight,
     id,
+    isMounted,
   } = usePopper();
   const [style, setStyle] = React.useState<React.CSSProperties>({});
 
@@ -80,68 +80,39 @@ export const PopperContent = React.forwardRef<
 
   useResize(isOpen, handleResize);
 
-  const attrs = {
-    "data-align": align,
-    "data-side": side,
-    tabIndex: -1,
-    "data-state": isOpen ? "open" : "closed",
-    "data-popper-content": "",
-    "aria-orientation": "vertical",
-    ref: mergeRefs(ref, forwardRef),
-    id,
-    className,
-    onKeyDown: chain(handleKeyDown, onKeyDown),
-    ...etc,
-  } as HTMLAttributes<HTMLDivElement>;
-
   if (typeof document === "undefined") {
     return null;
   }
-
-  return createPortal(
-    <AnimatePresence onExitComplete={() => activeTrigger?.focus()}>
-      {isOpen && triggerPosition && (
-        <ReactFocusLock
-          disabled={!isOpen}
-          onDeactivation={() => activeTrigger?.focus()}
+  if (isOpen && triggerPosition)
+    return createPortal(
+      <ReactFocusLock
+        disabled={!isOpen}
+        onDeactivation={() => activeTrigger?.focus()}
+      >
+        <div
+          ref={mergeRefs(ref, forwardRef)}
+          id={id}
+          tabIndex={-1}
+          data-align={align}
+          data-side={side}
+          data-state={!isMounted ? "open" : "closed"}
+          data-popper-content
+          aria-orientation='vertical'
+          {...etc}
+          onKeyDown={chain(handleKeyDown, onKeyDown)}
+          data-popper-wrapper=''
+          style={{
+            position: "fixed",
+            pointerEvents: "auto",
+            zIndex: 100,
+            left: triggerPosition.left,
+            ...style,
+          }}
         >
-          <motion.div
-            animate={{
-              opacity: 1,
-              scale: 1,
-            }}
-            initial={{
-              opacity: 0,
-              scale: 0.8,
-            }}
-            exit={{
-              opacity: 0,
-              scale: 0.8,
-            }}
-            data-popper-wrapper=''
-            style={{
-              position: "fixed",
-              pointerEvents: "auto",
-              left: triggerPosition.left,
-              ...style,
-            }}
-          >
-            {asChild && React.isValidElement(children) ? (
-              React.cloneElement(children, {
-                ...attrs,
-                className: clsx(
-                  className,
-                  (children.props as React.ComponentProps<"div">).className
-                ),
-              } as HTMLAttributes<HTMLElement>)
-            ) : (
-              <div {...attrs}>{children}</div>
-            )}
-          </motion.div>
-        </ReactFocusLock>
-      )}
-    </AnimatePresence>,
-    document.body
-  );
+          {children}
+        </div>
+      </ReactFocusLock>,
+      document.body
+    );
 });
 PopperContent.displayName = "PopperContent";

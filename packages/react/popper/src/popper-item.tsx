@@ -1,7 +1,10 @@
 import React, { HTMLAttributes } from "react";
 import { PopperItemProps } from "./popper.types";
 import { usePopper } from "./popper-context";
-import { POPPER_ITEM_SELECTOR } from "@everest-ui/react-selectors";
+import {
+  POPPER_CONTENT_SELECTOR,
+  POPPER_ITEM_SELECTOR,
+} from "@everest-ui/react-selectors";
 import { mergeRefs } from "@everest-ui/react-utils";
 import { chain } from "@everest-ui/utils";
 import clsx from "clsx";
@@ -20,7 +23,6 @@ export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
       disabled,
       suffix,
       prefix,
-      inset,
       ...etc
     } = props;
     const { closePopper, highlightedItem, highlight } = usePopper();
@@ -40,14 +42,16 @@ export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
 
     function handleKeyDown(event: React.KeyboardEvent) {
       if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
         ref.current?.click();
       }
     }
 
-    function handleClick(event: React.MouseEvent<HTMLElement>) {
+    function handleClick(event: React.MouseEvent<HTMLDivElement>) {
       const target = event.target as HTMLElement;
       if (target.closest(POPPER_ITEM_SELECTOR)?.hasAttribute("aria-controls"))
         return;
+      event.preventDefault();
       closePopper();
     }
 

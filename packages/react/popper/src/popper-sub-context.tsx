@@ -46,6 +46,7 @@ export function PopperSub({ children }: { children: React.ReactNode }) {
 
   function closePopper() {
     setIsOpen(false);
+    console.log(true);
   }
 
   React.useEffect(() => {

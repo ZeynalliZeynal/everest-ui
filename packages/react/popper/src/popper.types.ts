@@ -50,6 +50,7 @@ export interface PopperItemProps
 }
 export interface PopperProviderProps {
   isOpen: boolean;
+  isMounted: boolean;
   triggerPosition: DOMRect | null;
   id: string;
   activeTrigger: HTMLElement | null;

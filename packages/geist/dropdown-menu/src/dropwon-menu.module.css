@@ -4,10 +4,30 @@
 
 :root {
   --border: var(--ds-gray-alpha-400);
+  --content-background: var(--ds-background-100);
+  --content-width: 200px;
   --content-radius: 0.75rem;
   --content-padding: 0.5rem;
   --item-height: 2.5rem;
   --item-padding: 0 0.5rem;
+}
+
+@keyframes animate-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .trigger {
@@ -47,9 +67,16 @@
   background-color: var(--ds-background-100);
   margin-top: 0.75rem;
 
-  min-width: 200px;
+  min-width: var(--content-width);
 
   outline: none;
+
+  &[data-state="open"] {
+    animation: animate-in 0.5s forwards;
+  }
+  &[data-state="closed"] {
+    animation: animate-out 0.5s forwards;
+  }
 }
 
 .item {
@@ -63,7 +90,8 @@
   transition: all 200ms ease-in-out;
   outline: none;
 
-  &:focus {
+  &:focus,
+  &[data-state="open"] {
     background-color: var(--ds-gray-alpha-100);
   }
 
@@ -88,4 +116,14 @@
   margin: 0.5rem calc(var(--content-padding) * -1);
   height: 1px;
   background-color: var(--border);
+}
+
+.subContent {
+  background-color: var(--content-background);
+  padding: var(--content-padding);
+  border-radius: var(--content-radius);
+  border: 1px solid var(--border);
+  min-width: var(--content-width);
+
+  outline: none;
 }

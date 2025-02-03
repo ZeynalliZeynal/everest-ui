@@ -48,7 +48,7 @@ export const PopperSubContent = React.forwardRef<
       event.clientY
     );
     if (relatedTarget && relatedTarget !== activeTrigger) {
-      closePopper();
+      // closePopper();
     }
   }
 
@@ -65,7 +65,7 @@ export const PopperSubContent = React.forwardRef<
 
     setStyle({
       top: triggerPosition.top,
-      left: newLeft,
+      left: newLeft - 1,
     });
   }, [ref, triggerPosition]);
 
@@ -83,7 +83,7 @@ export const PopperSubContent = React.forwardRef<
     document.addEventListener("keydown", handleCloseOnKeyDown);
 
     return () => document.removeEventListener("keydown", handleCloseOnKeyDown);
-  }, [activeTrigger, closePopper, highlight, ref]);
+  }, [activeTrigger, closePopper, ref]);
 
   const attrs = {
     tabIndex: -1,
@@ -98,6 +98,10 @@ export const PopperSubContent = React.forwardRef<
     onMouseLeave: handleMouseLeave,
     ...etc,
   } as HTMLAttributes<HTMLDivElement>;
+
+  if (typeof document === "undefined") {
+    return null;
+  }
 
   return createPortal(
     <AnimatePresence>
@@ -119,7 +123,7 @@ export const PopperSubContent = React.forwardRef<
           style={{
             position: "fixed",
             pointerEvents: "auto",
-            left: triggerPosition.left,
+            zIndex: 100,
             ...style,
           }}
         >

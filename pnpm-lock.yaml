@@ -42,8 +42,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/geist/button
       '@everest-ui/geist-dropdown-menu':
-        specifier: ^1.1.1
-        version: 1.1.1(@everest-ui/geist-colors@1.1.0)(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: workspace:*
+        version: link:../../packages/geist/dropdown-menu
       next:
         specifier: ^15.1.6
         version: 15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -811,23 +811,6 @@ packages:
 
   '@everest-ui/colors@1.2.2':
     resolution: {integrity: sha512-iMhhh3hC/PAyOX3xpAnCKsSgflgi7ul7hkrTA8MqsRSo5/AkL+ByTMQD0T4/iN5P4rU60NEM1nxXvx11OEY3dw==}
-
-  '@everest-ui/geist-colors@1.1.0':
-    resolution: {integrity: sha512-p3VEaIOHSeUn+BSB1rFc0HD3pmABbdkuVp1lKEnGjKHJ98TKlCPnVS+fx5bHfMikS2i+Rlt+RzvH8+15KqGHGA==}
-
-  '@everest-ui/geist-dropdown-menu@1.1.1':
-    resolution: {integrity: sha512-mD77N4BLqDcjiYRrjloq6TGbKpQfqeT+g59TzTC6eO74nW8RJAc0SGERVFlWZQhfR2gIArVEJV8AKnjHlfmZnw==}
-    peerDependencies:
-      '@everest-ui/geist-colors': ^1.1.0
-      '@types/react': '*'
-      '@types/react-dom': '*'
-      react: ^18.0 || ^19.0 || ^19.0.0-rc
-      react-dom: ^18.0 || ^19.0 || ^19.0.0-rc
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      '@types/react-dom':
-        optional: true
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -4364,18 +4347,6 @@ snapshots:
       levn: 0.4.1
 
   '@everest-ui/colors@1.2.2': {}
-
-  '@everest-ui/geist-colors@1.1.0': {}
-
-  '@everest-ui/geist-dropdown-menu@1.1.1(@everest-ui/geist-colors@1.1.0)(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@everest-ui/geist-colors': 1.1.0
-      clsx: 2.1.1
-      react: 19.0.0
-      react-dom: 19.0.0(react@19.0.0)
-    optionalDependencies:
-      '@types/react': 19.0.8
-      '@types/react-dom': 19.0.3(@types/react@19.0.8)
 
   '@humanfs/core@0.19.1': {}
 
