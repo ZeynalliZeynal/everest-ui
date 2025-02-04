@@ -1,18 +1,18 @@
-import { useOutsideClick, useResize } from "@everest-ui/react-hooks";
-import { POPPER_ITEM_SELECTOR } from "@everest-ui/react-selectors";
-import { keyboardArrowNavigation, mergeRefs } from "@everest-ui/react-utils";
-import { chain } from "@everest-ui/utils";
 import React, { HTMLAttributes, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { usePopper } from "./popper-context";
 import { usePopperSub } from "./popper-sub-context";
 import { PopperSubContentProps } from "./popper.types";
+import { keyboardArrowNavigation, mergeRefs } from "@everest-ui/react-utils";
+import { POPPER_ITEM_SELECTOR } from "@everest-ui/react-selectors";
+import { useOutsideClick, useResize } from "@everest-ui/react-hooks";
+import { chain } from "@everest-ui/utils";
 
 export const PopperSubContent = React.forwardRef<
   HTMLDivElement,
   PopperSubContentProps
 >((props, forwardRef) => {
-  const { children, className, asChild, onKeyDown, ...etc } = props;
+  const { children, className, onKeyDown, ...etc } = props;
   const { highlight, isOpen: isParentOpen } = usePopper();
   const {
     isOpen,
@@ -64,7 +64,7 @@ export const PopperSubContent = React.forwardRef<
 
     setStyle({
       top: triggerPosition.top,
-      left: newLeft - 1,
+      left: newLeft,
     });
   }, [ref, triggerPosition]);
 
@@ -82,11 +82,11 @@ export const PopperSubContent = React.forwardRef<
     document.addEventListener("keydown", handleCloseOnKeyDown);
 
     return () => document.removeEventListener("keydown", handleCloseOnKeyDown);
-  }, [activeTrigger, closePopper, ref]);
+  }, [activeTrigger, closePopper, highlight, ref]);
 
   const attrs = {
     tabIndex: -1,
-    "data-state": isOpen ? "open" : "closed",
+    "data-state": !isMounted ? "open" : "closed",
     "data-popper-sub-content": "",
     "aria-orientation": "vertical",
     "aria-labelledby": id,
@@ -98,10 +98,6 @@ export const PopperSubContent = React.forwardRef<
     ...etc,
   } as HTMLAttributes<HTMLDivElement>;
 
-  if (typeof document === "undefined") {
-    return null;
-  }
-
   if (isParentOpen && isOpen && triggerPosition)
     return createPortal(
       <div
@@ -110,6 +106,7 @@ export const PopperSubContent = React.forwardRef<
           position: "fixed",
           pointerEvents: "auto",
           zIndex: 100,
+          left: triggerPosition.left,
           ...style,
         }}
       >

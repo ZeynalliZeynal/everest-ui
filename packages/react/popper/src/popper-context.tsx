@@ -70,6 +70,12 @@ export function Popper({ children }: { children: React.ReactNode }) {
       POPPER_CONTENT_SELECTOR
     ) as HTMLElement;
 
+    if (!popperContent) {
+      setIsMounted(false);
+      setIsOpen(false);
+      return;
+    }
+
     const hasAnimation =
       window.getComputedStyle(popperContent).animationDuration !== "0s" ||
       window.getComputedStyle(popperContent).transitionDuration !== "0s";

@@ -1,5 +1,11 @@
 # @everest-ui/react-popper
 
+## 1.8.0
+
+### Minor Changes
+
+- Change related target logic in sub trigger
+
 ## 1.7.0
 
 ### Minor Changes

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { PopperProviderProps } from "./popper.types";
 import {
-  POPPER_ITEM_SELECTOR,
   POPPER_SUB_CONTENT_SELECTOR,
+  POPPER_ITEM_SELECTOR,
 } from "@everest-ui/react-selectors";
-
 export const PopperSubContext = React.createContext<PopperProviderProps | null>(
   null
 );
@@ -37,8 +36,8 @@ export function PopperSub({ children }: { children: React.ReactNode }) {
       ).getBoundingClientRect();
 
       setTriggerPosition(rect);
-
-      setIsOpen((prevState) => !prevState);
+      setIsMounted(false);
+      setIsOpen(true);
 
       activeTrigger.current = event.currentTarget || event.target;
     },
@@ -54,6 +53,7 @@ export function PopperSub({ children }: { children: React.ReactNode }) {
     if (!popperContent) {
       setIsMounted(false);
       setIsOpen(false);
+      return;
     }
 
     const hasAnimation =

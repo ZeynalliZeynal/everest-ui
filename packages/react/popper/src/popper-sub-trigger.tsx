@@ -1,11 +1,12 @@
+"use client";
+
 import React, { useCallback } from "react";
 import { usePopper } from "./popper-context";
 import { PopperItem } from "./popper-item";
 import { usePopperSub } from "./popper-sub-context";
 import { PopperItemProps } from "./popper.types";
 import { useResize } from "@everest-ui/react-hooks";
-import clsx from "clsx";
-import { ChevronRight } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 
 export function PopperSubTrigger(props: PopperItemProps) {
   const { children, className, ...etc } = props;
@@ -21,11 +22,14 @@ export function PopperSubTrigger(props: PopperItemProps) {
   }
 
   function handleMouseLeave(event: React.MouseEvent<HTMLElement>) {
-    const relatedTarget = document.elementFromPoint(
-      event.clientX,
-      event.clientY
-    );
-    if (relatedTarget && !relatedTarget.closest(`[aria-labelledby='${id}']`)) {
+    // const relatedTarget = document.elementFromPoint(
+    //   event.clientX,
+    //   event.clientY
+    // );
+    const popperSubContent =
+      event.relatedTarget &&
+      (event.relatedTarget as HTMLElement).closest(`[aria-labelledby='${id}']`);
+    if (!popperSubContent) {
       closePopper();
       highlight(null);
     }
@@ -59,12 +63,11 @@ export function PopperSubTrigger(props: PopperItemProps) {
       aria-controls={id}
       aria-expanded={isOpen}
       data-state={isOpen ? "open" : "closed"}
-      className={clsx(className)}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onKeyDown={handleKeyDown}
-      suffix={<ChevronRight />}
+      suffix={<ChevronLeft />}
     >
       {children}
     </PopperItem>

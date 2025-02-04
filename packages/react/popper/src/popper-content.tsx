@@ -1,3 +1,8 @@
+import React, { useCallback } from "react";
+import { createPortal } from "react-dom";
+import ReactFocusLock from "react-focus-lock";
+import { usePopper } from "./popper-context";
+import { PopperContentProps } from "./popper.types";
 import { useOutsideClick, useResize } from "@everest-ui/react-hooks";
 import {
   POPPER_ITEM_SELECTOR,
@@ -9,11 +14,6 @@ import {
   mergeRefs,
 } from "@everest-ui/react-utils";
 import { chain } from "@everest-ui/utils";
-import React, { useCallback } from "react";
-import { createPortal } from "react-dom";
-import ReactFocusLock from "react-focus-lock";
-import { usePopper } from "./popper-context";
-import { PopperContentProps } from "./popper.types";
 
 export const PopperContent = React.forwardRef<
   HTMLDivElement,
@@ -23,7 +23,6 @@ export const PopperContent = React.forwardRef<
     children,
     align = "center",
     side = "bottom",
-    asChild,
     onKeyDown,
     ...etc
   } = props;
@@ -78,9 +77,6 @@ export const PopperContent = React.forwardRef<
 
   useResize(isOpen, handleResize);
 
-  if (typeof document === "undefined") {
-    return null;
-  }
   if (isOpen && triggerPosition)
     return createPortal(
       <ReactFocusLock
@@ -94,7 +90,7 @@ export const PopperContent = React.forwardRef<
           data-align={align}
           data-side={side}
           data-state={!isMounted ? "open" : "closed"}
-          data-popper-content
+          data-popper-content=''
           aria-orientation='vertical'
           {...etc}
           onKeyDown={chain(handleKeyDown, onKeyDown)}
@@ -103,7 +99,6 @@ export const PopperContent = React.forwardRef<
             position: "fixed",
             pointerEvents: "auto",
             zIndex: 100,
-            left: triggerPosition.left,
             ...style,
           }}
         >
