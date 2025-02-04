@@ -1,6 +1,6 @@
 {
-  "name": "@everest-ui/react-popper",
-  "version": "1.9.0",
+  "name": "@everest-ui/react-dropdown-menu",
+  "version": "1.0.0",
   "type": "module",
   "files": [
     "dist"
@@ -18,21 +18,16 @@
   },
   "devDependencies": {
     "@everest-ui/build-config": "workspace:*",
-    "@everest-ui/react-hooks": "workspace:*",
-    "@everest-ui/react-selectors": "workspace:*",
-    "@everest-ui/react-utils": "workspace:*",
     "@everest-ui/typescript-config": "workspace:*",
-    "@everest-ui/utils": "workspace:*",
+    "@everest-ui/react-popper": "workspace:*",
     "@turbo/gen": "^2.3.4",
     "@types/node": "^22.10.10",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
-    "react-focus-lock": "^2.13.5",
     "tsup": "^8.3.6",
     "typescript": "5.7.3"
   },
   "dependencies": {
-    "clsx": "^2.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

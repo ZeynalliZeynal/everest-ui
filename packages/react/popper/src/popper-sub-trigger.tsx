@@ -6,7 +6,6 @@ import { PopperItem } from "./popper-item";
 import { usePopperSub } from "./popper-sub-context";
 import { PopperItemProps } from "./popper.types";
 import { useResize } from "@everest-ui/react-hooks";
-import { ChevronLeft } from "lucide-react";
 
 export function PopperSubTrigger(props: PopperItemProps) {
   const { children, ...etc } = props;
@@ -67,7 +66,6 @@ export function PopperSubTrigger(props: PopperItemProps) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onKeyDown={handleKeyDown}
-      suffix={<ChevronLeft />}
     >
       {children}
     </PopperItem>
