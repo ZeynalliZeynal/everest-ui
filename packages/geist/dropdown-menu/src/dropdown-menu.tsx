@@ -16,7 +16,7 @@ import {
   PopperTriggerProps,
 } from "@everest-ui/react-popper";
 
-import styles from "./dropwon-menu.module.css";
+import styles from "./dropdown-menu.module.css";
 import clsx from "clsx";
 import React from "react";
 

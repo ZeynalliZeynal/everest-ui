@@ -9,7 +9,7 @@ import { useResize } from "@everest-ui/react-hooks";
 import { ChevronLeft } from "lucide-react";
 
 export function PopperSubTrigger(props: PopperItemProps) {
-  const { children, className, ...etc } = props;
+  const { children, ...etc } = props;
   const { highlight } = usePopper();
   const { openPopper, id, setTriggerPosition, isOpen, closePopper } =
     usePopperSub();

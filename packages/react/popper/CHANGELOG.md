@@ -1,5 +1,11 @@
 # @everest-ui/react-popper
 
+## 1.9.0
+
+### Minor Changes
+
+- Remove unused className in sub trigger
+
 ## 1.8.0
 
 ### Minor Changes
