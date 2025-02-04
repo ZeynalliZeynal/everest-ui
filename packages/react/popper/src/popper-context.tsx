@@ -6,6 +6,7 @@ import {
   POPPER_ITEM_SELECTOR,
   POPPER_SUB_CONTENT_SELECTOR,
 } from "@everest-ui/react-selectors";
+import { debounceWithAnimation } from "@everest-ui/react-utils";
 
 const PopperContext = React.createContext<PopperContextProps | null>(null);
 
@@ -38,7 +39,7 @@ export function Popper({ children }: { children: React.ReactNode }) {
         element.closest(POPPER_CONTENT_SELECTOR) ||
         (element.closest(POPPER_SUB_CONTENT_SELECTOR) as HTMLElement);
       const items = Array.from(
-        rootElement.querySelectorAll(POPPER_ITEM_SELECTOR)
+        rootElement.querySelectorAll(POPPER_ITEM_SELECTOR),
       );
       setHighlightedItem(element);
       element?.focus();
@@ -63,11 +64,11 @@ export function Popper({ children }: { children: React.ReactNode }) {
     (document.querySelector(POPPER_CONTENT_SELECTOR) as HTMLElement)?.focus();
   }
 
-  function closePopper() {
+  const closePopper = React.useCallback(() => {
     setIsMounted(true);
 
     const popperContent = document.querySelector(
-      POPPER_CONTENT_SELECTOR
+      POPPER_CONTENT_SELECTOR,
     ) as HTMLElement;
 
     if (!popperContent) {
@@ -76,41 +77,15 @@ export function Popper({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    const hasAnimation =
-      window.getComputedStyle(popperContent).animationDuration !== "0s" ||
-      window.getComputedStyle(popperContent).transitionDuration !== "0s";
-
-    const duration = Number(
-      window.getComputedStyle(popperContent).animationDuration.split("s")[0] ||
-        window.getComputedStyle(popperContent).transitionDuration.split("s")[0]
-    );
-
-    if (hasAnimation) {
-      setTimeout(() => {
-        setIsMounted(false);
-        setIsOpen(false);
-      }, duration * 1000); // convert to ms
-
-      /* This approach has a limitation. it doesn't apply the delay on click of the popper item and i couldn't figure it out yet.
-      function handleAnimateEnd() {
-        setIsMounted(false);
-        setIsOpen(false);
-        
-        popperContent.removeEventListener("animationend", handleAnimateEnd);
-        popperContent.removeEventListener("transitionend", handleAnimateEnd);
-      }
-      popperContent.addEventListener("animationend", handleAnimateEnd);
-      popperContent.addEventListener("transitionend", handleAnimateEnd);
-      */
-    } else {
-      setIsMounted(true);
+    debounceWithAnimation(popperContent, () => {
+      setIsMounted(false);
       setIsOpen(false);
-    }
+    });
 
     activeTrigger.current?.focus();
     setHighlightedItem(null);
     setHighlightedIndex(undefined);
-  }
+  }, []);
 
   useRestrict({ condition: isOpen });
 

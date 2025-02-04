@@ -1,5 +1,11 @@
 # @everest-ui/react-popper
 
+## 1.10.0
+
+### Minor Changes
+
+- Add a debouncer function to prevent the flickering issue when closing the popper
+
 ## 1.9.0
 
 ### Minor Changes

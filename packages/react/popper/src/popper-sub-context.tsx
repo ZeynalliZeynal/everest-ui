@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { PopperProviderProps } from "./popper.types";
 import {
-  POPPER_SUB_CONTENT_SELECTOR,
   POPPER_ITEM_SELECTOR,
+  POPPER_SUB_CONTENT_SELECTOR,
 } from "@everest-ui/react-selectors";
+import { debounceWithAnimation } from "@everest-ui/react-utils";
+
 export const PopperSubContext = React.createContext<PopperProviderProps | null>(
-  null
+  null,
 );
 
 export function usePopperSub() {
@@ -41,13 +43,13 @@ export function PopperSub({ children }: { children: React.ReactNode }) {
 
       activeTrigger.current = event.currentTarget || event.target;
     },
-    []
+    [],
   );
   function closePopper() {
     setIsMounted(true);
 
     const popperContent = document.querySelector(
-      POPPER_SUB_CONTENT_SELECTOR
+      POPPER_SUB_CONTENT_SELECTOR,
     ) as HTMLElement;
 
     if (!popperContent) {
@@ -56,24 +58,10 @@ export function PopperSub({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    const hasAnimation =
-      window.getComputedStyle(popperContent).animationDuration !== "0s" ||
-      window.getComputedStyle(popperContent).transitionDuration !== "0s";
-
-    const duration = Number(
-      window.getComputedStyle(popperContent).animationDuration.split("s")[0] ||
-        window.getComputedStyle(popperContent).transitionDuration.split("s")[0]
-    );
-
-    if (hasAnimation) {
-      setTimeout(() => {
-        setIsMounted(false);
-        setIsOpen(false);
-      }, duration * 1000);
-    } else {
-      setIsMounted(true);
+    debounceWithAnimation(popperContent, () => {
+      setIsMounted(false);
       setIsOpen(false);
-    }
+    });
   }
 
   React.useEffect(() => {
@@ -81,7 +69,7 @@ export function PopperSub({ children }: { children: React.ReactNode }) {
       (
         document
           .querySelector(
-            `${POPPER_SUB_CONTENT_SELECTOR}[aria-labelledby='${id}']`
+            `${POPPER_SUB_CONTENT_SELECTOR}[aria-labelledby='${id}']`,
           )
           ?.querySelector(POPPER_ITEM_SELECTOR) as HTMLElement
       )?.focus();
