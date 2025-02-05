@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/react-dropdown-menu",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "type": "module",
   "files": [
     "dist"
@@ -27,7 +27,7 @@
     "typescript": "5.7.3"
   },
   "dependencies": {
-    "@everest-ui/react-popper": "^1.10.0",
+    "@everest-ui/react-popper": "workspace:*",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
