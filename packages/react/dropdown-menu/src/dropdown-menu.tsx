@@ -33,17 +33,8 @@ export function DropdownMenuContent({
   return <PopperContent align={align} {...rest} />;
 }
 
-export function DropdownMenuItem({ style, ...props }: PopperItemProps) {
-  return (
-    <PopperItem
-      style={{
-        display: "flex",
-        alignItems: "center",
-        ...style,
-      }}
-      {...props}
-    />
-  );
+export function DropdownMenuItem(props: PopperItemProps) {
+  return <PopperItem {...props} />;
 }
 
 export function DropdownMenuGroup(props: React.ComponentProps<"div">) {
