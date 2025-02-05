@@ -365,16 +365,6 @@ importers:
 
   packages/react/popper:
     dependencies:
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      react:
-        specifier: ^19.0.0
-        version: 19.0.0
-      react-dom:
-        specifier: ^19.0.0
-        version: 19.0.0(react@19.0.0)
-    devDependencies:
       '@everest-ui/build-config':
         specifier: workspace:*
         version: link:../../build-config
@@ -387,12 +377,22 @@ importers:
       '@everest-ui/react-utils':
         specifier: workspace:*
         version: link:../utils
-      '@everest-ui/typescript-config':
-        specifier: workspace:*
-        version: link:../../typescript-config
       '@everest-ui/utils':
         specifier: workspace:*
         version: link:../../utils
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+    devDependencies:
+      '@everest-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../typescript-config
       '@turbo/gen':
         specifier: ^2.3.4
         version: 2.3.4(@types/node@22.10.10)(typescript@5.7.3)

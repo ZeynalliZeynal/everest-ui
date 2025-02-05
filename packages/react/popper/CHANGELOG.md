@@ -1,5 +1,11 @@
 # @everest-ui/react-popper
 
+## 1.11.0
+
+### Minor Changes
+
+- Update package.json file
+
 ## 1.10.0
 
 ### Minor Changes
