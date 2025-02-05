@@ -291,6 +291,9 @@ importers:
 
   packages/react/dropdown-menu:
     dependencies:
+      '@everest-ui/react-popper':
+        specifier: ^1.10.0
+        version: 1.10.0(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -301,9 +304,6 @@ importers:
       '@everest-ui/build-config':
         specifier: workspace:*
         version: link:../../build-config
-      '@everest-ui/react-popper':
-        specifier: ^1.10.0
-        version: 1.10.0(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@everest-ui/typescript-config':
         specifier: workspace:*
         version: link:../../typescript-config
