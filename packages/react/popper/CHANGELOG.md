@@ -1,5 +1,11 @@
 # @everest-ui/react-popper
 
+## 1.12.0
+
+### Minor Changes
+
+- Remove event.preventDefault statement.
+
 ## 1.11.0
 
 ### Minor Changes

@@ -1,10 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import { PopperItemProps } from "./popper.types";
 import { usePopper } from "./popper-context";
-import {
-  POPPER_CONTENT_SELECTOR,
-  POPPER_ITEM_SELECTOR,
-} from "@everest-ui/react-selectors";
+import { POPPER_ITEM_SELECTOR } from "@everest-ui/react-selectors";
 import { mergeRefs } from "@everest-ui/react-utils";
 import { chain } from "@everest-ui/utils";
 import clsx from "clsx";
@@ -51,7 +48,7 @@ export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
       const target = event.target as HTMLElement;
       if (target.closest(POPPER_ITEM_SELECTOR)?.hasAttribute("aria-controls"))
         return;
-      event.preventDefault();
+      event.stopPropagation();
       closePopper();
     }
 
@@ -75,7 +72,7 @@ export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
         ...attrs,
         className: clsx(
           className,
-          (children.props as React.ComponentProps<"div">).className
+          (children.props as React.ComponentProps<"div">).className,
         ),
       } as HTMLAttributes<HTMLElement>)
     ) : (
@@ -87,7 +84,7 @@ export const PopperItem = React.forwardRef<HTMLDivElement, PopperItemProps>(
         {suffix}
       </div>
     );
-  }
+  },
 );
 
 PopperItem.displayName = "PopperItem";
