@@ -1,4 +1,5 @@
-import { AlignProps, SideProps } from "@everest-ui/react-utils";
+export type SideProps = "top" | "right" | "bottom" | "left";
+export type AlignProps = "start" | "center" | "end";
 
 export interface PopperProviderProps {
   isOpen: boolean;

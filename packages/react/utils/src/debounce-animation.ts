@@ -11,7 +11,7 @@ export function debounceWithAnimation(
   const duration =
     Math.max(parseFloat(animationDuration), parseFloat(transitionDuration)) *
       1000 -
-    50; // add a delay to prevent the flickering
+    10; // add a delay to prevent the flickering
 
   if (hasAnimation) {
     setTimeout(() => {
