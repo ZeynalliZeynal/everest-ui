@@ -1,5 +1,12 @@
 # docs
 
+## 2.0.20
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/react-dropdown-menu@1.4.0
+
 ## 2.0.19
 
 ### Patch Changes

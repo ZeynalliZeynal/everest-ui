@@ -69,3 +69,11 @@ export function DropdownMenuSubTrigger({ style, ...props }: PopperItemProps) {
     />
   );
 }
+DropdownMenu.Trigger = DropdownMenuTrigger;
+DropdownMenu.Content = DropdownMenuContent;
+DropdownMenu.Separator = DropdownMenuSeparator;
+DropdownMenu.Item = DropdownMenuItem;
+DropdownMenu.Group = DropdownMenuGroup;
+DropdownMenu.Label = DropdownMenuLabel;
+DropdownMenuSub.Trigger = DropdownMenuSubTrigger;
+DropdownMenuSub.Content = DropdownMenuSubContent;

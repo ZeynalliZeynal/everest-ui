@@ -10,11 +10,7 @@
       <change beforePath="$PROJECT_DIR$/apps/docs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/react/dropdown-menu/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/dropdown-menu/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/react/dropdown-menu/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/dropdown-menu/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/popper/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/popper/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/popper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/popper/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/popper/src/popper-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/popper/src/popper-context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/popper/src/popper-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/popper/src/popper-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/popper/src/popper-sub-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/popper/src/popper-sub-context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react/dropdown-menu/src/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/dropdown-menu/src/dropdown-menu.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +135,7 @@
       <workItem from="1738744167976" duration="3148000" />
       <workItem from="1738757504150" duration="1708000" />
       <workItem from="1738759469647" duration="133000" />
-      <workItem from="1738826937336" duration="1075000" />
+      <workItem from="1738826937336" duration="1835000" />
     </task>
     <servers />
   </component>

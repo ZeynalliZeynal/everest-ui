@@ -1,5 +1,11 @@
 # @everest-ui/react-dropdown-menu
 
+## 1.4.0
+
+### Minor Changes
+
+- Support compound pattern
+
 ## 1.2.13
 
 ### Patch Changes
