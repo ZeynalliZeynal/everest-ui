@@ -7,6 +7,12 @@ import {
   POPPER_SUB_CONTENT_SELECTOR,
 } from "@everest-ui/react-selectors";
 import { debounceWithAnimation } from "@everest-ui/react-utils";
+import { PopperItem } from "./popper-item";
+import { PopperLabel } from "./popper-label";
+import { PopperGroup } from "./popper-group";
+import { PopperTrigger } from "./popper-trigger";
+import { PopperContent } from "./popper-content";
+import { PopperSeparator } from "./popper-separator";
 
 const PopperContext = React.createContext<PopperContextProps | null>(null);
 
@@ -110,3 +116,10 @@ export function Popper({ children }: { children: React.ReactNode }) {
     </PopperContext.Provider>
   );
 }
+
+Popper.Item = PopperItem;
+Popper.Trigger = PopperTrigger;
+Popper.Content = PopperContent;
+Popper.Separator = PopperSeparator;
+Popper.Group = PopperGroup;
+Popper.Label = PopperLabel;

@@ -5,6 +5,8 @@ import {
   POPPER_SUB_CONTENT_SELECTOR,
 } from "@everest-ui/react-selectors";
 import { debounceWithAnimation } from "@everest-ui/react-utils";
+import { PopperSubTrigger } from "./popper-sub-trigger";
+import { PopperSubContent } from "./popper-sub-content";
 
 export const PopperSubContext = React.createContext<PopperProviderProps | null>(
   null,
@@ -96,3 +98,6 @@ export function PopperSub({ children }: { children: React.ReactNode }) {
     </PopperSubContext.Provider>
   );
 }
+
+PopperSub.Trigger = PopperSubTrigger;
+PopperSub.Content = PopperSubContent;

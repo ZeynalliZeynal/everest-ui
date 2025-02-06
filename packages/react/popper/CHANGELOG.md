@@ -1,5 +1,11 @@
 # @everest-ui/react-popper
 
+## 1.13.0
+
+### Minor Changes
+
+- Implement compount component pattern
+
 ## 1.12.0
 
 ### Minor Changes
