@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/react-accordion",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "files": [
     "dist"
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@everest-ui/build-config": "workspace:*",
     "@everest-ui/typescript-config": "workspace:*",
+    "@everest-ui/react-utils": "workspace:*",
     "@turbo/gen": "^2.3.4",
     "@types/node": "^22.10.10",
     "@types/react": "19.0.8",

@@ -2,9 +2,6 @@
 
 This is an **Accordion** component, very similar to the _shadcn_ implementation
 
-**⚠️ It comes with no styling at all. You do the styling as you want. The only style is the `overflow: hidden` set to
-the `AccordionContent` which is important.**
-
 ## Installing
 
 ```sh

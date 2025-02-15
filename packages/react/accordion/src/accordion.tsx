@@ -1,4 +1,5 @@
 import React from "react";
+import { debounceWithAnimation } from "@everest-ui/react-utils";
 
 interface AccordionContextProps {
   openItems: Set<string>;
@@ -10,9 +11,9 @@ const AccordionContext = React.createContext<AccordionContextProps | null>(
   null,
 );
 
-type AccordionItemContextType = {
+interface AccordionItemContextType {
   id: string;
-};
+}
 
 const AccordionItemContext =
   React.createContext<AccordionItemContextType | null>(null);
@@ -85,12 +86,7 @@ export function AccordionItem({
 
   return (
     <AccordionItemContext.Provider value={{ id: itemId }}>
-      <div
-        data-accordion-item=""
-        role="listitem"
-        className={className}
-        {...props}
-      >
+      <div role="listitem" className={className} {...props}>
         {children}
       </div>
     </AccordionItemContext.Provider>
@@ -107,7 +103,6 @@ export function AccordionTrigger({
 
   return (
     <button
-      data-accordion-trigger=""
       className={className}
       {...props}
       aria-expanded={openItems.has(id)}
@@ -122,44 +117,55 @@ export function AccordionTrigger({
 export function AccordionContent({
   children,
   className,
+  style,
   ...props
 }: React.ComponentProps<"div">) {
-  const { openItems } = useAccordion()!;
+  const { openItems } = useAccordion();
   const { id } = useAccordionItem();
+  const [height, setHeight] = React.useState(0);
+  const [width, setWidth] = React.useState(0);
+  const [isVisible, setIsVisible] = React.useState(false);
+
   const isOpen = openItems.has(id);
   const contentRef = React.useRef<HTMLDivElement>(null);
-  const [height, setHeight] = React.useState(0);
 
   React.useLayoutEffect(() => {
     const content = contentRef.current;
     if (!content) return;
+    setHeight(content.scrollHeight);
+    setWidth(content.scrollWidth);
 
-    const resizeObserver = new ResizeObserver(() => {
-      if (isOpen) {
-        setHeight(content.scrollHeight);
-      } else {
-        setHeight(0);
-      }
-    });
-
-    resizeObserver.observe(content);
-
-    return () => resizeObserver.disconnect();
+    if (isOpen) {
+      setIsVisible(true);
+    } else {
+      const { timer } = debounceWithAnimation(content, () => {
+        setIsVisible(false);
+      });
+      return () => clearTimeout(timer);
+    }
   }, [isOpen]);
 
   return (
     <div
-      aria-hidden={!isOpen}
+      ref={contentRef}
       data-state={isOpen ? "open" : "closed"}
       aria-expanded={isOpen}
-      data-accordion-content=""
       className={className}
-      style={{ overflow: "hidden", height: `${height}px` }}
+      style={
+        {
+          "--accordion-content-height": `${height}px`,
+          "--accordion-content-width": `${width}px`,
+          ...style,
+        } as React.CSSProperties
+      }
       {...props}
+      hidden={!isVisible && !isOpen}
     >
-      <div ref={contentRef} data-accordion-content-inner="">
-        {children}
-      </div>
+      {!isVisible && !isOpen ? null : children}
     </div>
   );
 }
+
+Accordion.Item = AccordionItem;
+Accordion.Content = AccordionContent;
+Accordion.Trigger = AccordionTrigger;

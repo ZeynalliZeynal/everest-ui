@@ -304,6 +304,9 @@ importers:
       '@everest-ui/build-config':
         specifier: workspace:*
         version: link:../../build-config
+      '@everest-ui/react-utils':
+        specifier: workspace:*
+        version: link:../utils
       '@everest-ui/typescript-config':
         specifier: workspace:*
         version: link:../../typescript-config
