@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/accordion/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/accordion/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/accordion/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/accordion/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/accordion/src/accordion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/accordion/src/accordion.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/utils/src/debounce-animation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/utils/src/debounce-animation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +135,7 @@
       <workItem from="1738859713760" duration="334000" />
       <workItem from="1739565841032" duration="2278000" />
       <workItem from="1739609205128" duration="6000" />
-      <workItem from="1739609858145" duration="3322000" />
+      <workItem from="1739609858145" duration="4433000" />
     </task>
     <servers />
   </component>

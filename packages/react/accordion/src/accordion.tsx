@@ -1,5 +1,6 @@
 import React from "react";
-import { debounceWithAnimation } from "@everest-ui/react-utils";
+import { debounceWithAnimation, mergeRefs } from "@everest-ui/react-utils";
+import clsx from "clsx";
 
 interface AccordionContextProps {
   openItems: Set<string>;
@@ -34,92 +35,156 @@ function useAccordionItem() {
   return context;
 }
 
-export interface AccordionProps extends React.ComponentProps<"div"> {
+interface AccordionComponent {
+  Item: typeof AccordionItem;
+  Content: typeof AccordionContent;
+}
+
+// * ------------------------------- Accordion
+export interface AccordionProps extends React.HTMLAttributes<HTMLElement> {
   type?: "single" | "multiple";
+  asChild?: React.ReactNode;
 }
 
-export function Accordion({
-  children,
-  type = "single",
-  className,
-  ...props
-}: AccordionProps) {
-  const [openItems, setOpenItems] = React.useState<Set<string>>(new Set());
-  const allowMultiple = type === "multiple";
+interface AccordionComponent
+  extends React.ForwardRefExoticComponent<
+    AccordionProps & React.RefAttributes<HTMLElement>
+  > {
+  Item: typeof AccordionItem;
+  Trigger: typeof AccordionTrigger;
+  Content: typeof AccordionContent;
+}
 
-  const toggleItem = (id: string) => {
-    setOpenItems((prevState) => {
-      const prev = new Set(prevState);
-      if (prev.has(id)) {
-        prev.delete(id);
-      } else {
-        if (!allowMultiple) {
-          prev.clear();
+export const Accordion = React.forwardRef<HTMLElement, AccordionProps>(
+  ({ children, type = "single", className, asChild, ...props }, ref) => {
+    const [openItems, setOpenItems] = React.useState<Set<string>>(new Set());
+    const allowMultiple = type === "multiple";
+
+    const toggleItem = (id: string) => {
+      setOpenItems((prevState) => {
+        const prev = new Set(prevState);
+        if (prev.has(id)) {
+          prev.delete(id);
+        } else {
+          if (!allowMultiple) {
+            prev.clear();
+          }
+          prev.add(id);
         }
-        prev.add(id);
-      }
-      return prev;
-    });
-  };
+        return prev;
+      });
+    };
 
-  return (
-    <AccordionContext.Provider value={{ openItems, toggleItem, allowMultiple }}>
-      <div className={className} role="list" {...props}>
-        {children}
-      </div>
-    </AccordionContext.Provider>
-  );
-}
+    const attrs = {
+      ref,
+      role: "list",
+      className,
+      ...props,
+    } as React.HTMLAttributes<HTMLElement>;
 
+    return (
+      <AccordionContext.Provider
+        value={{ openItems, toggleItem, allowMultiple }}
+      >
+        {React.isValidElement(children) && asChild ? (
+          React.cloneElement(children, {
+            ...attrs,
+            className: clsx(
+              className,
+              (children.props as React.HTMLAttributes<HTMLElement>).className,
+            ),
+          } as React.HTMLAttributes<HTMLElement>)
+        ) : (
+          <div {...attrs}>{children}</div>
+        )}
+      </AccordionContext.Provider>
+    );
+  },
+) as AccordionComponent;
+Accordion.displayName = "Accordion";
+
+// * ------------------------------- AccordionItem
 export interface AccordionItemProps extends React.ComponentProps<"div"> {
   value: string;
+  asChild?: React.ReactNode;
 }
 
-export function AccordionItem({
-  children,
-  className,
-  value,
-  ...props
-}: AccordionItemProps) {
-  const id = React.useId();
-  const itemId = `${value}-${id}`;
+export const AccordionItem = React.forwardRef<HTMLElement, AccordionItemProps>(
+  ({ children, className, value, asChild, ...props }, ref) => {
+    const id = React.useId();
+    const itemId = `${value}-${id}`;
 
-  return (
-    <AccordionItemContext.Provider value={{ id: itemId }}>
-      <div role="listitem" className={className} {...props}>
-        {children}
-      </div>
-    </AccordionItemContext.Provider>
-  );
+    const attrs = {
+      ref,
+      className,
+      role: "listitem",
+      ...props,
+    } as React.HTMLAttributes<HTMLElement>;
+
+    return (
+      <AccordionItemContext.Provider value={{ id: itemId }}>
+        {React.isValidElement(children) && asChild ? (
+          React.cloneElement(children, {
+            ...attrs,
+            className: clsx(
+              className,
+              (children.props as React.HTMLAttributes<HTMLElement>).className,
+            ),
+          } as React.HTMLAttributes<HTMLElement>)
+        ) : (
+          <div {...attrs}>{children}</div>
+        )}
+      </AccordionItemContext.Provider>
+    );
+  },
+);
+AccordionItem.displayName = "AccordionItem";
+
+// * ------------------------------- AccordionTrigger
+export interface AccordionTriggerProps extends React.ComponentProps<"button"> {
+  asChild?: boolean;
 }
 
-export function AccordionTrigger({
-  children,
-  className,
-  ...props
-}: React.ComponentProps<"button">) {
+export const AccordionTrigger = React.forwardRef<
+  HTMLElement,
+  AccordionTriggerProps
+>(({ children, className, asChild, ...props }, ref) => {
   const { openItems, toggleItem } = useAccordion();
   const { id } = useAccordionItem();
 
-  return (
-    <button
-      className={className}
-      {...props}
-      aria-expanded={openItems.has(id)}
-      data-state={openItems.has(id) ? "open" : "closed"}
-      onClick={() => toggleItem(id)}
-    >
-      {children}
-    </button>
+  const attrs = {
+    ref,
+    className,
+    ...props,
+    "aria-expanded": openItems.has(id),
+    "data-state": openItems.has(id) ? "open" : "closed",
+    onClick: () => toggleItem(id),
+  } as React.HTMLAttributes<HTMLElement>;
+
+  return React.isValidElement(children) && asChild ? (
+    React.cloneElement(children, {
+      ...attrs,
+      className: clsx(
+        className,
+        (children.props as React.HTMLAttributes<HTMLElement>).className,
+      ),
+    } as React.HTMLAttributes<HTMLElement>)
+  ) : (
+    <button {...attrs}>{children}</button>
   );
+});
+AccordionTrigger.displayName = "AccordionTrigger";
+
+// * ------------------------------- AccordionContent
+export interface AccordionContentProps
+  extends React.HTMLAttributes<HTMLElement> {
+  asChild?: React.ReactNode;
 }
 
-export function AccordionContent({
-  children,
-  className,
-  style,
-  ...props
-}: React.ComponentProps<"div">) {
+export const AccordionContent = React.forwardRef<
+  HTMLElement,
+  AccordionContentProps
+>(({ children, className, style, asChild, ...props }, ref) => {
   const { openItems } = useAccordion();
   const { id } = useAccordionItem();
   const [height, setHeight] = React.useState(0);
@@ -145,26 +210,33 @@ export function AccordionContent({
     }
   }, [isOpen]);
 
-  return (
-    <div
-      ref={contentRef}
-      data-state={isOpen ? "open" : "closed"}
-      aria-expanded={isOpen}
-      className={className}
-      style={
-        {
-          "--accordion-content-height": `${height}px`,
-          "--accordion-content-width": `${width}px`,
-          ...style,
-        } as React.CSSProperties
-      }
-      {...props}
-      hidden={!isVisible && !isOpen}
-    >
-      {!isVisible && !isOpen ? null : children}
-    </div>
+  const attrs = {
+    ref: mergeRefs(contentRef, ref),
+    "data-state": isOpen ? "open" : "closed",
+    "aria-expanded": isOpen,
+    className,
+    style: {
+      "--accordion-content-height": `${height}px`,
+      "--accordion-content-width": `${width}px`,
+      ...style,
+    } as React.CSSProperties,
+    ...props,
+    hidden: !isVisible && !isOpen,
+  } as React.HTMLAttributes<HTMLElement>;
+
+  return React.isValidElement(children) && asChild ? (
+    React.cloneElement(children, {
+      ...attrs,
+      className: clsx(
+        className,
+        (children.props as React.HTMLAttributes<HTMLElement>).className,
+      ),
+    } as React.HTMLAttributes<HTMLElement>)
+  ) : (
+    <div {...attrs}>{!isVisible && !isOpen ? null : children}</div>
   );
-}
+});
+AccordionContent.displayName = "AccordionContent";
 
 Accordion.Item = AccordionItem;
 Accordion.Content = AccordionContent;
