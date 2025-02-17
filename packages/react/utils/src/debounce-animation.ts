@@ -13,7 +13,7 @@ export function debounceWithAnimation(
   const duration =
     Math.max(parseFloat(animationDuration), parseFloat(transitionDuration)) *
       1000 -
-    10;
+    25;
 
   if (hasAnimation) {
     timer = setTimeout(() => {

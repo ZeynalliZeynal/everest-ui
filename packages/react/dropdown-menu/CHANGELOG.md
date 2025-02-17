@@ -1,5 +1,11 @@
 # @everest-ui/react-dropdown-menu
 
+## 1.5.0
+
+### Minor Changes
+
+- Update popper package
+
 ## 1.4.0
 
 ### Minor Changes
