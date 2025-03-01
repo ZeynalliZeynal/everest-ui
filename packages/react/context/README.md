@@ -19,17 +19,17 @@ So, I created a function that returns both provider and the hook. Therefore, I g
 
 ## Anatomy
 
-- `createReactContext`
+- `createContext`
   - Returns a tuple: [Provider, hook]
-  - Accepts a string value
+  - Accepts a string value, an object for default values, and an object for options to change the error message.
 
 ## How to use?
 
 ```tsx
-import { createReactContext } from "@everest-ui/react-context";
+import { createContext } from "@everest-ui/react-context";
 
 const CONTEXT_NAME = 'CustomContext';
-const [CustomContextProvider, useCustomContext] = createReactContext<CustomContextProps>(CONTEXT_NAME);
+const [CustomContextProvider, useCustomContext] = createContext<CustomContextProps>(CONTEXT_NAME);
 
 // use provider
 <CustomContextProvider

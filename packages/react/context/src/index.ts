@@ -1,3 +1,3 @@
 "use client";
 
-export { createReactContext } from "./create-context";
+export { createContext } from "./context";
