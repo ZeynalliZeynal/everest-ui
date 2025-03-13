@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.changeset/thirty-bobcats-vanish.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/context/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/context/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/context/src/create-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/context/src/context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/context/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/context/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react/context/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/context/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "20.17.0",
     "javascript.nodejs.core.library.typings.version": "20.17.16",
-    "last_opened_file_path": "C:/Users/asus/Desktop/education/packages/everest-ui/packages/react/context",
+    "last_opened_file_path": "D:/education/packages/everest-ui",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -57,7 +56,7 @@
     "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "actions.on.save",
     "settings.editor.splitter.proportion": "0.25906736",
-    "ts.external.directory.path": "C:\\Users\\asus\\Desktop\\education\\packages\\everest-ui\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "D:\\education\\packages\\everest-ui\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -141,7 +140,8 @@
       <workItem from="1739609858145" duration="4433000" />
       <workItem from="1739614999523" duration="3453000" />
       <workItem from="1739779430821" duration="2384000" />
-      <workItem from="1740835321059" duration="3320000" />
+      <workItem from="1740835321059" duration="4735000" />
+      <workItem from="1741891487724" duration="422000" />
     </task>
     <servers />
   </component>

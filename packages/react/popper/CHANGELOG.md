@@ -1,5 +1,12 @@
 # @everest-ui/react-popper
 
+## 1.13.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/react-hooks@1.2.0
+
 ## 1.13.0
 
 ### Minor Changes
