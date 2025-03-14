@@ -1,5 +1,11 @@
 # @everest-ui/react-dropdown-menu
 
+## 1.5.2
+
+### Patch Changes
+
+- @everest-ui/react-popper@1.13.2
+
 ## 1.5.1
 
 ### Patch Changes
