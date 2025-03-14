@@ -1,5 +1,11 @@
 # @everest-ui/react-hooks
 
+## 1.4.0
+
+### Minor Changes
+
+- Add useDebouncedCallback
+
 ## 1.3.1
 
 ### Patch Changes
