@@ -1,0 +1,16 @@
+export { default as Award } from "./Award";
+export { default as Book1 } from "./Book1";
+export { default as Book } from "./Book";
+export { default as Bookmark2 } from "./Bookmark2";
+export { default as Bookmark } from "./Bookmark";
+export { default as Briefcase } from "./Briefcase";
+export { default as BrifecaseCross } from "./BrifecaseCross";
+export { default as BrifecaseTick } from "./BrifecaseTick";
+export { default as BrifecaseTimer } from "./BrifecaseTimer";
+export { default as Brifecase } from "./Brifecase";
+export { default as Calculator } from "./Calculator";
+export { default as Clipboard } from "./Clipboard";
+export { default as Gift } from "./Gift";
+export { default as Note2 } from "./Note2";
+export { default as Note } from "./Note";
+export { default as Teacher } from "./Teacher";

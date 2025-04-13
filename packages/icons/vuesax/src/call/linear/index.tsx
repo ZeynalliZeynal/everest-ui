@@ -1,0 +1,9 @@
+export { default as CallAdd } from "./CallAdd";
+export { default as CallCalling } from "./CallCalling";
+export { default as CallIncoming } from "./CallIncoming";
+export { default as CallMinus } from "./CallMinus";
+export { default as CallOutgoing } from "./CallOutgoing";
+export { default as CallReceived } from "./CallReceived";
+export { default as CallRemove } from "./CallRemove";
+export { default as CallSlash } from "./CallSlash";
+export { default as Call } from "./Call";
