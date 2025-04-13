@@ -189,6 +189,58 @@ importers:
         specifier: 5.7.3
         version: 5.7.3
 
+  packages/animated/tabs:
+    dependencies:
+      '@everest-ui/react-context':
+        specifier: workspace:*
+        version: link:../../react/context
+      '@everest-ui/react-hooks':
+        specifier: workspace:*
+        version: link:../../react/hooks
+      '@everest-ui/react-utils':
+        specifier: workspace:*
+        version: link:../../react/utils
+      '@everest-ui/utils':
+        specifier: workspace:*
+        version: link:../../utils
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+    devDependencies:
+      '@everest-ui/build-config':
+        specifier: workspace:*
+        version: link:../../build-config
+      '@everest-ui/typescript-config':
+        specifier: workspace:*
+        version: link:../../typescript-config
+      '@turbo/gen':
+        specifier: ^2.3.4
+        version: 2.3.4(@types/node@22.10.10)(typescript@5.7.3)
+      '@types/node':
+        specifier: ^22.10.10
+        version: 22.10.10
+      '@types/react':
+        specifier: 19.0.8
+        version: 19.0.8
+      '@types/react-dom':
+        specifier: 19.0.3
+        version: 19.0.3(@types/react@19.0.8)
+      framer-motion:
+        specifier: ^12.6.2
+        version: 12.6.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-focus-lock:
+        specifier: ^2.13.5
+        version: 2.13.5(@types/react@19.0.8)(react@19.0.0)
+      tsup:
+        specifier: ^8.3.6
+        version: 8.3.6(jiti@2.4.2)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: 5.7.3
+        version: 5.7.3
+
   packages/build-config:
     devDependencies:
       '@rollup/plugin-commonjs':
