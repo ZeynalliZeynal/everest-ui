@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/animated/popper/src/animated-popper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/animated/popper/src/animated-popper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,18 +70,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons" />
       <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\animated\popper" />
       <recent name="C:\Users\asus\Desktop\education\packages\everest-ui\packages\react\context" />
       <recent name="C:\Users\asus\Desktop\education\packages\everest-ui\packages\react\accordion" />
       <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\popper\src" />
-      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\geist\colors" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons\vue\icons\paragraph" />
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons\vue\icons\money" />
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons\vue" />
       <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\button" />
       <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\src" />
-      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\ui" />
-      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\button\src" />
-      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\stories" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -157,7 +153,7 @@
       <workItem from="1741933470519" duration="1264000" />
       <workItem from="1743345352848" duration="3063000" />
       <workItem from="1743869492736" duration="34000" />
-      <workItem from="1744543207379" duration="313000" />
+      <workItem from="1744543207379" duration="4813000" />
     </task>
     <servers />
   </component>
