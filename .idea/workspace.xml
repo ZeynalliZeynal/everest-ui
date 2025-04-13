@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/animated/popper/src/animated-popper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/animated/popper/src/animated-popper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +17,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ZeynalliZeynal"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ZeynalliZeynal/everest-ui.git",
+    "accountId": "bb629d40-87cd-4ff9-8e9f-3f48b2a93800"
+  }
+}]]></component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
@@ -40,7 +53,7 @@
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "20.17.0",
     "javascript.nodejs.core.library.typings.version": "20.17.16",
-    "last_opened_file_path": "C:/Users/asus/Desktop/zeynal/web/packages/everest-ui/packages/animated/popper",
+    "last_opened_file_path": "C:/Users/asus/Desktop/zeynal/web/packages/everest-ui/packages/icons",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -142,7 +155,9 @@
       <workItem from="1740835321059" duration="4735000" />
       <workItem from="1741891487724" duration="836000" />
       <workItem from="1741933470519" duration="1264000" />
-      <workItem from="1743345352848" duration="2417000" />
+      <workItem from="1743345352848" duration="3063000" />
+      <workItem from="1743869492736" duration="34000" />
+      <workItem from="1744543207379" duration="313000" />
     </task>
     <servers />
   </component>

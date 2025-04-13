@@ -21,6 +21,9 @@ type PropsWithAsChild<Props> = {
   asChild?: boolean;
 } & Props;
 
+/**
+ * Context properties for AnimatedPopper.
+ */
 export interface AnimatedPopperContextProps {
   id: string;
   open: boolean;
@@ -32,9 +35,18 @@ export interface AnimatedPopperContextProps {
   activeTrigger: MutableRefObject<HTMLDivElement | null>;
 }
 
+/**
+ * Context provider and hook for AnimatedPopper.
+ */
 export const [AnimatedPopperProvider, useAnimatedPopper] =
   createContext<AnimatedPopperContextProps>(ANIMATED_POPPER_NAME);
 
+/**
+ * AnimatedPopper component that manages popper state and behavior.
+ * @param children - The popper's child components.
+ * @param open - Controls whether the popper is open.
+ * @param onOpenChange - Callback when the open state changes.
+ */
 export function AnimatedPopper({
   children,
   open: controlledOpen,
@@ -94,7 +106,9 @@ export function AnimatedPopper({
   );
 }
 
-// trigger
+/**
+ * Trigger component for opening the popper.
+ */
 export const AnimatedPopperTrigger = React.forwardRef<
   HTMLDivElement,
   PropsWithAsChild<HTMLMotionProps<"div">>
@@ -132,7 +146,9 @@ export const AnimatedPopperTrigger = React.forwardRef<
 });
 AnimatedPopperTrigger.displayName = "AnimatedPopperTrigger";
 
-// close
+/**
+ * Close button component for AnimatedPopper.
+ */
 export const AnimatedPopperClose = React.forwardRef<
   HTMLButtonElement,
   PropsWithAsChild<HTMLAttributes<HTMLElement>>
@@ -159,7 +175,9 @@ export const AnimatedPopperClose = React.forwardRef<
 });
 AnimatedPopperClose.displayName = "AnimatedPopperClose";
 
-// overlay
+/**
+ * Overlay component for the popper.
+ */
 export const AnimatedPopperOverlay = React.forwardRef<
   HTMLDivElement,
   Omit<HTMLMotionProps<"div">, "children">
@@ -179,7 +197,9 @@ export const AnimatedPopperOverlay = React.forwardRef<
 });
 AnimatedPopperOverlay.displayName = "AnimatedPopperOverlay";
 
-// content
+/**
+ * Content component for the popper.
+ */
 export const AnimatedPopperContent = React.forwardRef<
   HTMLDivElement,
   HTMLMotionProps<"div">
