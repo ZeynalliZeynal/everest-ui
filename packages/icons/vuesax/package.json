@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/icons-vuesax",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "clean": "rimraf dist && rimraf src",
     "build": "tsup src/**/index.tsx --format cjs,esm --minify --dts --out-dir dist",
