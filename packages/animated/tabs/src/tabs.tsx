@@ -29,7 +29,7 @@ export function useTabsContext() {
   const context = React.useContext(TabsContext);
   if (!context)
     throw new Error(
-      "useTabsContext cannot be used outside of the TabsProvider"
+      "useTabsContext cannot be used outside of the TabsProvider",
     );
   return context;
 }
@@ -42,7 +42,7 @@ export function Tabs({ children, ...props }: TabsProviderProps) {
   return (
     <TabsContext.Provider value={{ activeIndicatorId, activePillId }}>
       <div
-        role='tablist'
+        role="tablist"
         data-orientation={props["aria-orientation"]}
         {...props}
       >
@@ -63,16 +63,19 @@ export function Tab<T extends React.ElementType = "div">({
   const Component = as || "div";
   const { activePillId, activeIndicatorId } = useTabsContext();
 
-  const active = isPillActive ? "pill" : isIndicatorActive ? "indicator" : null;
-
   return (
-    <Component role='tab' data-active={active} {...props}>
+    <Component
+      role="tab"
+      data-pill={isPillActive ? "" : null}
+      data-indicator={isIndicatorActive ? "" : null}
+      {...props}
+    >
       <AnimatePresence presenceAffectsLayout={true}>
         {isPillActive && (
           <motion.div
             {...(pillProps as HTMLMotionProps<"div">)}
             layoutId={activePillId}
-            data-active-pill=''
+            data-active-pill=""
           />
         )}
       </AnimatePresence>
@@ -82,7 +85,7 @@ export function Tab<T extends React.ElementType = "div">({
           <motion.div
             {...(indicatorProps as HTMLMotionProps<"div">)}
             layoutId={activeIndicatorId}
-            data-active-indicator=''
+            data-active-indicator=""
           />
         )}
       </AnimatePresence>
