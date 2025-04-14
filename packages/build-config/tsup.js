@@ -8,5 +8,8 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   outDir: "dist",
+  outExtension: ({ format }) => ({
+    js: format === "cjs" ? ".js" : ".mjs",
+  }),
   external: ["react"],
 });

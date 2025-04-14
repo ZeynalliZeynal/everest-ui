@@ -1,27 +1,20 @@
 {
   "name": "@everest-ui/animated-tabs",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "files": [
     "dist"
   ],
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
-    }
-  },
   "sideEffects": false,
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
     "build": "tsup",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist && rimraf node_modules"
   },
   "devDependencies": {
     "@everest-ui/build-config": "workspace:*",
