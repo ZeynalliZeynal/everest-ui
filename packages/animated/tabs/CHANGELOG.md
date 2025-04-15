@@ -1,5 +1,11 @@
 # @everest-ui/animated-tabs
 
+## 1.4.0
+
+### Minor Changes
+
+- Update tabs to include motion props
+
 ## 1.3.0
 
 ### Minor Changes

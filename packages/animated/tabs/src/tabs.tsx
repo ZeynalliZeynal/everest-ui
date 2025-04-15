@@ -1,43 +1,41 @@
 "use client";
 
 import { AnimatePresence, HTMLMotionProps, motion } from "framer-motion";
-import React, { ComponentProps, useId } from "react";
-
-interface TabProps<T extends React.ElementType = "div">
-  extends React.HTMLAttributes<HTMLElement> {
-  children?: React.ReactNode;
-  isPillActive?: boolean;
-  isIndicatorActive?: boolean;
-  as?: T;
-}
-
-export type TabPropsWithAs<T extends React.ElementType> = TabProps<T> &
-  Omit<React.ComponentPropsWithoutRef<T>, keyof TabProps<T>>;
+import React, {
+  ComponentPropsWithoutRef,
+  ElementType,
+  forwardRef,
+  HTMLAttributes,
+  ReactElement,
+  ReactNode,
+  Ref,
+  useContext,
+  useId,
+} from "react";
 
 interface TabsContextProps {
   activeIndicatorId: string;
   activePillId: string;
 }
 
-export interface TabsProviderProps extends ComponentProps<"div"> {
-  children: React.ReactNode;
-}
-
 const TabsContext = React.createContext<TabsContextProps | null>(null);
 
-export function useTabsContext() {
-  const context = React.useContext(TabsContext);
-  if (!context)
-    throw new Error(
-      "useTabsContext cannot be used outside of the TabsProvider",
-    );
+function useTabsContext(): TabsContextProps {
+  const context = useContext(TabsContext);
+  if (!context) {
+    throw new Error("useTabsContext must be used within a TabsProvider");
+  }
   return context;
+}
+
+interface TabsProviderProps extends HTMLAttributes<HTMLDivElement> {
+  children: ReactNode;
 }
 
 export function Tabs({ children, ...props }: TabsProviderProps) {
   const id = useId();
-  const activeIndicatorId = `indicated-tab${id}`;
-  const activePillId = `active-tab${id}`;
+  const activeIndicatorId = `indicator-tab-${id}`;
+  const activePillId = `pill-tab-${id}`;
 
   return (
     <TabsContext.Provider value={{ activeIndicatorId, activePillId }}>
@@ -51,44 +49,60 @@ export function Tabs({ children, ...props }: TabsProviderProps) {
     </TabsContext.Provider>
   );
 }
-export function Tab<T extends React.ElementType = "div">({
-  children,
-  isPillActive,
-  isIndicatorActive,
-  as,
-  pillProps,
-  indicatorProps,
-  ...props
-}: TabPropsWithAs<T>) {
-  const Component = as || "div";
+
+type AsProp<T extends ElementType> = {
+  as?: T;
+};
+
+export type TabProps<T extends ElementType> = {
+  children?: ReactNode;
+  isPillActive?: boolean;
+  isIndicatorActive?: boolean;
+  pillProps?: HTMLMotionProps<"div">;
+  indicatorProps?: HTMLMotionProps<"div">;
+} & AsProp<T> &
+  Omit<ComponentPropsWithoutRef<T>, keyof AsProp<T> | "children">;
+
+type TabComponent = <T extends ElementType = "div">(
+  props: TabProps<T> & { ref?: Ref<HTMLElement> },
+) => ReactElement | null;
+
+function TabInner<T extends ElementType = "div">(
+  {
+    children,
+    isPillActive,
+    isIndicatorActive,
+    pillProps,
+    indicatorProps,
+    as,
+    ...restProps
+  }: TabProps<T>,
+  ref: Ref<HTMLElement>,
+) {
+  const Component = (as || "div") as ElementType;
   const { activePillId, activeIndicatorId } = useTabsContext();
 
   return (
-    <Component
-      role="tab"
-      data-pill={isPillActive ? "" : null}
-      data-indicator={isIndicatorActive ? "" : null}
-      {...props}
-    >
-      <AnimatePresence presenceAffectsLayout={true}>
+    <Component ref={ref} role="tab" {...restProps}>
+      <AnimatePresence>
         {isPillActive && (
-          <motion.div
-            {...(pillProps as HTMLMotionProps<"div">)}
-            layoutId={activePillId}
-            data-active-pill=""
-          />
+          <motion.div layoutId={activePillId} data-active-pill {...pillProps} />
         )}
       </AnimatePresence>
+
       {children}
+
       <AnimatePresence>
         {isIndicatorActive && (
           <motion.div
-            {...(indicatorProps as HTMLMotionProps<"div">)}
             layoutId={activeIndicatorId}
-            data-active-indicator=""
+            data-active-indicator
+            {...indicatorProps}
           />
         )}
       </AnimatePresence>
     </Component>
   );
 }
+
+export const Tab = forwardRef(TabInner) as TabComponent;
