@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/animated-tabs",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "type": "module",
   "files": [
     "dist"
@@ -14,7 +14,7 @@
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
     "build": "tsup",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist && rimraf node_modules"
   },
   "devDependencies": {
     "@everest-ui/build-config": "workspace:*",
