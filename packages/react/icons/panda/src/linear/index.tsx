@@ -853,7 +853,7 @@ export { default as PlaylistMinimalistic2 } from "./PlaylistMinimalistic2";
 export { default as PlaylistMinimalistic3 } from "./PlaylistMinimalistic3";
 export { default as Playlist } from "./Playlist";
 export { default as PlugCircle } from "./PlugCircle";
-export { default as Plus, minus } from "./Plus,Minus";
+export { default as PlusMinus } from "./PlusMinus";
 export { default as Podcast } from "./Podcast";
 export { default as PointOnMapPerspective } from "./PointOnMapPerspective";
 export { default as PointOnMap } from "./PointOnMap";
