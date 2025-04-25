@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/icons/vuesax/scripts/archive-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/vuesax/scripts/archive-icons.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/icons/vuesax/scripts/relocate-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/vuesax/scripts/relocate-icons.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/icons/vuesax/scripts/sanitize-filenames.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/vuesax/scripts/sanitize-filenames.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/icons/hicon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/hicon/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/icons/hicon/scripts/archive-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/panda/scripts/archive-icons.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/icons/hicon/scripts/relocate-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/panda/scripts/relocate-icons.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/icons/hicon/scripts/sanitize-filenames.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/panda/scripts/sanitize-filenames.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/archive-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/archive-icons.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/relocate-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/relocate-icons.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/sanitize-filenames.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/sanitize-filenames.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +158,7 @@
       <workItem from="1744550697390" duration="7000" />
       <workItem from="1744874490844" duration="3000" />
       <workItem from="1744874502187" duration="6683000" />
-      <workItem from="1745597906144" duration="2686000" />
+      <workItem from="1745597906144" duration="3100000" />
     </task>
     <servers />
   </component>
