@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a031a0a-95a5-40f1-acdd-ce268b8f7097" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/icons/vuesax/scripts/archive-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/vuesax/scripts/archive-icons.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/icons/vuesax/scripts/relocate-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/vuesax/scripts/relocate-icons.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/icons/vuesax/scripts/sanitize-filenames.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/vuesax/scripts/sanitize-filenames.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react/icons/hicon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/hicon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react/icons/hicon/scripts/archive-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/panda/scripts/archive-icons.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react/icons/hicon/scripts/relocate-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/panda/scripts/relocate-icons.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react/icons/hicon/scripts/sanitize-filenames.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/panda/scripts/sanitize-filenames.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/archive-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/archive-icons.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/relocate-icons.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/relocate-icons.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/sanitize-filenames.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/react/icons/vuesax/scripts/sanitize-filenames.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,48 +53,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.preview.ts.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.17.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.17.16&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/Desktop/zeynal/web/packages/everest-ui/packages/icons&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;npm.colors &gt; build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.storybook.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\asus\\Desktop\\zeynal\\web\\packages\\everest-ui\\node_modules\\prettier&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.25906736&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\asus\\Desktop\\zeynal\\web\\packages\\everest-ui\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.preview.ts.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "code.cleanup.on.save": "true",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "20.17.0",
+    "javascript.nodejs.core.library.typings.version": "20.17.16",
+    "last_opened_file_path": "C:/Users/asus/Desktop/zeynal/web/packages/everest-ui/packages/react/icons/panda",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "npm.colors > build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.storybook.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\asus\\Desktop\\zeynal\\web\\packages\\everest-ui\\node_modules\\prettier",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "settings.editor.splitter.proportion": "0.25906736",
+    "ts.external.directory.path": "C:\\Users\\asus\\Desktop\\zeynal\\web\\packages\\everest-ui\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\react\icons\panda" />
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\react\icons\vuesax" />
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons\vuesax" />
       <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons" />
       <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\animated\popper" />
-      <recent name="C:\Users\asus\Desktop\education\packages\everest-ui\packages\react\context" />
-      <recent name="C:\Users\asus\Desktop\education\packages\everest-ui\packages\react\accordion" />
-      <recent name="C:\Users\asus\Desktop\education\libraries\everest-ui\packages\react\popper\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons\vuesax\icons\currency" />
-      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons\vuesax\icons\essentional\linear" />
-      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons\vuesax\icons\content\linear" />
-      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons\vue\icons\paragraph" />
-      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\icons\vue\icons\money" />
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\react\icons\panda" />
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\react\icons\panda\icons\Linear" />
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\react\icons\panda\icons\Linear\Notes" />
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\react\icons\vuesax\icons\linear" />
+      <recent name="C:\Users\asus\Desktop\zeynal\web\packages\everest-ui\packages\react\icons\vuesax\icons\linear\vuesax\linear" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -159,6 +171,8 @@
       <workItem from="1744550453186" duration="232000" />
       <workItem from="1744550697390" duration="7000" />
       <workItem from="1744874490844" duration="3000" />
+      <workItem from="1744874502187" duration="6683000" />
+      <workItem from="1745597906144" duration="2686000" />
     </task>
     <servers />
   </component>

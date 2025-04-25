@@ -8,8 +8,8 @@ import kleur from "kleur";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Define the directory where your .icons are stored.
-const iconsDir = path.resolve(__dirname, "../.icons");
+// Define the directory where your ..icons are stored.
+const iconsDir = path.resolve(__dirname, "../..icons");
 
 /**
  * Sanitize the file name by removing the trailing pattern "-(content)" if present.

@@ -9,9 +9,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Set the base directory where your categories are located.
-// If your .icons are inside a folder like ".icons" in the project root,
+// If your ..icons are inside a folder like "..icons" in the project root,
 // you can adjust the following line accordingly.
-const baseDir = path.resolve(__dirname, "../.icons");
+const baseDir = path.resolve(__dirname, "../..icons");
 
 async function relocateVuesaxFolders() {
   try {

@@ -6,9 +6,9 @@
     "build": "tsup",
     "convert": "npx svgr .icons --out-dir ./src --ext tsx --icon --typescript --replace-attr-values #FAFAFA=currentColor --filename-case pascal",
     "push": "git push origin main --follow-tags",
-    "relocate": "node scripts/relocate-icons.mjs",
-    "archive:icons": "node scripts/archive-icons.mjs",
-    "sanitize": "node scripts/sanitize-filenames.mjs"
+    "relocate": "node ../panda/scripts/relocate-icons.mjs",
+    "archive:icons": "node ../panda/scripts/archive-icons.mjs",
+    "sanitize": "node ../panda/scripts/sanitize-filenames.mjs"
   },
   "type": "module",
   "source": "src/index.ts",

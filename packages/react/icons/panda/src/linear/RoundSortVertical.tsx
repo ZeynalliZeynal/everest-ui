@@ -1,0 +1,22 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const SvgRoundSortVertical = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <circle cx={12} cy={12} r={10} stroke="#000" strokeWidth={1.5} />
+    <path
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M9.5 8v8m0 0L7 13.25M9.5 16l2.5-2.75M14.5 16V8m0 0L12 10.75M14.5 8l2.5 2.75"
+    />
+  </svg>
+);
+export default SvgRoundSortVertical;

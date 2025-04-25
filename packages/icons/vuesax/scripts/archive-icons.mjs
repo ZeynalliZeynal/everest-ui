@@ -1,4 +1,4 @@
-// scripts/zip-.icons.mjs
+// scripts/zip-..icons.mjs
 import archiver from "archiver";
 import { createWriteStream } from "fs";
 import path from "path";
@@ -10,8 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Define the folder to zip and the output zip file path.
-const iconsFolder = path.resolve(__dirname, "../.icons");
-const zipFilePath = path.resolve(__dirname, "../.icons.zip");
+const iconsFolder = path.resolve(__dirname, "../..icons");
+const zipFilePath = path.resolve(__dirname, "../..icons.zip");
 
 function zipIconsFolder() {
   return new Promise((resolve, reject) => {
@@ -37,7 +37,7 @@ function zipIconsFolder() {
     // Pipe archive data to the output file.
     archive.pipe(output);
 
-    // Append files from the .icons folder. Passing 'false' omits the folder name in the zip file.
+    // Append files from the ..icons folder. Passing 'false' omits the folder name in the zip file.
     archive.directory(iconsFolder, false);
 
     // Finalize the archive (i.e., no more files will be appended)
