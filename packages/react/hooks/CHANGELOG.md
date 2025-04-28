@@ -1,5 +1,11 @@
 # @everest-ui/react-hooks
 
+## 2.1.0
+
+### Minor Changes
+
+- Update interface for useCopy hook
+
 ## 2.0.0
 
 ### Major Changes

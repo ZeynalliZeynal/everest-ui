@@ -1,5 +1,12 @@
 # docs
 
+## 2.0.27
+
+### Patch Changes
+
+- @everest-ui/geist-dropdown-menu@1.2.0
+- @everest-ui/react-dropdown-menu@1.5.6
+
 ## 2.0.26
 
 ### Patch Changes
