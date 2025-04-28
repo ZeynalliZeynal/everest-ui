@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface UseCopyProps {
-  text: string;
+  content: string;
   duration?: number;
 }
 
