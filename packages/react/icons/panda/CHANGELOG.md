@@ -1,5 +1,11 @@
 # @everest-ui/react-icons-hicon
 
+## 1.2.0
+
+### Minor Changes
+
+- Add money icons
+
 ## 1.1.0
 
 ### Minor Changes
