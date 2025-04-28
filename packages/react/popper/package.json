@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/react-popper",
-  "version": "1.13.6",
+  "version": "1.13.7",
   "type": "module",
   "files": [
     "dist"

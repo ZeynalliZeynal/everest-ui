@@ -1,5 +1,12 @@
 # @everest-ui/animated-popper
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/react-hooks@2.2.0
+
 ## 1.0.2
 
 ### Patch Changes
