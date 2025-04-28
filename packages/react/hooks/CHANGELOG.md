@@ -1,5 +1,11 @@
 # @everest-ui/react-hooks
 
+## 2.0.0
+
+### Major Changes
+
+- Update the argument name to content in useCopy
+
 ## 1.4.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
 {
   "name": "@everest-ui/react-dropdown-menu",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "type": "module",
   "files": [
     "dist"

@@ -5,12 +5,12 @@ export interface UseCopyProps {
   duration?: number;
 }
 
-export function useCopy({ text, duration = 1500 }: UseCopyProps) {
+export function useCopy({ content, duration = 1500 }: UseCopyProps) {
   const [copying, setCopying] = React.useState(false);
 
   const copy = async () => {
     try {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText(content);
       setCopying(true);
       setTimeout(() => setCopying(false), duration);
     } catch (err) {
