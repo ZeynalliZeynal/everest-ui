@@ -1,5 +1,17 @@
 # @everest-ui/react-hooks
 
+## 2.8.0
+
+### Minor Changes
+
+- Add documentation for ease of use
+
+## 2.3.0
+
+### Minor Changes
+
+- Update package.jsonn
+
 ## 2.2.0
 
 ### Minor Changes

@@ -1,5 +1,19 @@
 # @everest-ui/animated-tabs
 
+## 1.4.5
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/react-hooks@2.8.0
+
+## 1.4.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/react-hooks@2.3.0
+
 ## 1.4.3
 
 ### Patch Changes

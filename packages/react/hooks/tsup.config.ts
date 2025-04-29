@@ -1,6 +1,14 @@
 import { defineConfig } from "tsup";
-import Tsup from "@everest-ui/build-config/tsup";
 
 export default defineConfig({
-  ...Tsup,
+  entry: ["src/index.ts"],
+  format: ["cjs", "esm"],
+  dts: true,
+  splitting: false,
+  sourcemap: true,
+  clean: true,
+  treeshake: true,
+  minify: true,
+  jsx: "automatic",
+  external: ["react"],
 });
