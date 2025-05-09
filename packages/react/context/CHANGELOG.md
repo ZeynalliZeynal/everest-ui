@@ -1,5 +1,11 @@
 # @everest-ui/react-context
 
+## 1.4.0
+
+### Minor Changes
+
+- update package.json
+
 ## 1.3.0
 
 ### Minor Changes

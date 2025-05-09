@@ -1,5 +1,12 @@
 # @everest-ui/animated-tabs
 
+## 1.4.6
+
+### Patch Changes
+
+- Updated dependencies
+  - @everest-ui/react-context@1.4.0
+
 ## 1.4.5
 
 ### Patch Changes
